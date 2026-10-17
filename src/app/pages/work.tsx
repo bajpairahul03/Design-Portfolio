@@ -32,6 +32,7 @@ function WorkRow({ project }: { project: Project }) {
       <div className="flex flex-col md:col-span-7">
         <p className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[15px] font-medium text-muted-foreground">
           {project.category}
+          {project.concept && <span className="rounded-full border border-current px-2.5 py-0.5 text-[13px] font-semibold">Concept</span>}
           {project.locked && (
             <span className="inline-flex items-center gap-1.5 rounded-full border border-current px-2.5 py-0.5 text-[13px] font-semibold">
               <Lock aria-hidden="true" className="size-3.5" strokeWidth={2.25} /> Under NDA
@@ -79,7 +80,7 @@ export function WorkPage() {
       <section className="px-5 pb-[clamp(3rem,8vh,6rem)] pt-[calc(var(--header-height)+clamp(3rem,12vh,8rem))] md:px-10">
         <PageTitle className="text-[clamp(4.5rem,18vw,19rem)] leading-[0.8]">Work</PageTitle>
         <p className="mt-10 max-w-[42ch] text-[clamp(1.2rem,1.7vw,1.6rem)] leading-snug">
-          Recent projects at Microsoft, then earlier work on Bing Travel and SMS Organizer. Each is a short version of the full case study: what I owned, the decisions that mattered and what changed.
+          Recent projects at Microsoft, earlier work on Bing Travel and SMS Organizer, and a 24-hour concept for FirstClub. Each is a short version of the full case study: what I owned, the decisions that mattered and what changed.
         </p>
       </section>
       <ol className="px-5 pb-[clamp(5rem,14vh,10rem)] md:px-10" aria-label="Projects">

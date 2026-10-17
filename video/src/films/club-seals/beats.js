@@ -1,0 +1,23 @@
+// Narration-synced beats: [scene, line index, fragment of that line ('^' = line start), name, sound].
+export default [
+  ['hook', 0, 'six places', 'six', 'pop'],
+  ['hook', 1, 'For a new member', 'empty', 'pop'],
+  ['problem', 1, '^', 'spend', 'pop'],
+  ['problem', 1, 'a toss', 'toss', 'pop'],
+  ['problem', 1, 'nothing gave', 'reason', 'pop'],
+  ['insight', 1, '^', 'mark', 'impact'],
+  ['decision1', 0, 'four places', 'four', 'pop'],
+  ['decision1', 1, 'wax seal', 'seal', 'pop'],
+  ['decision1', 1, 'the old', 'old', 'pop'],
+  ['decision2', 0, 'Approved stamp', 'stamp', 'pop'],
+  ['decision2', 0, 'press and hold', 'hold', 'pop'],
+  ['decision2', 1, 'cracks', 'crack', 'impact'],
+  ['decision2', 1, 'always something', 'inside', 'pop'],
+  ['decision3', 0, 'five seals', 'five', 'pop'],
+  ['decision3', 0, 'choose', 'choose', 'click'],
+  ['decision3', 1, 'in the cart', 'cart', 'pop'],
+  ['result', 0, 'the audit', 'audit', 'tick'],
+  ['result', 0, 'nine edge cases', 'edges', 'tick'],
+  ['result', 0, 'clickable prototype', 'prototype', 'tick'],
+  ['result', 1, 'test the hold', 'next', 'pop'],
+]

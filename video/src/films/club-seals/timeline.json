@@ -1,0 +1,194 @@
+{
+  "fps": 30,
+  "durationInFrames": 3502,
+  "scenes": [
+    {
+      "id": "hook",
+      "from": 0,
+      "duration": 465,
+      "lines": [
+        {
+          "text": "FirstClub's members get rewards in at least six places across the app.",
+          "file": "hook-0.wav",
+          "start": 0.7,
+          "seconds": 4.063916666666667,
+          "from": 21,
+          "duration": 122
+        },
+        {
+          "text": "Its one game, Toss and Win, sits in the Profile menu. For a new member, it opens to an empty screen with nothing to play.",
+          "file": "hook-1.wav",
+          "start": 5.113916666666666,
+          "seconds": 7.776125,
+          "from": 153,
+          "duration": 233
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "from": 465,
+      "duration": 132,
+      "lines": []
+    },
+    {
+      "id": "problem",
+      "from": 597,
+      "duration": 553,
+      "lines": [
+        {
+          "text": "This was a twenty-four hour design challenge, and my audit of the live app found the same pattern everywhere.",
+          "file": "problem-0.wav",
+          "start": 20.5,
+          "seconds": 6.449208333333333,
+          "from": 615,
+          "duration": 193
+        },
+        {
+          "text": "Nearly every reward asked members for something first, a toss can land on the losing side, and nothing gave people a reason to come back between orders.",
+          "file": "problem-1.wav",
+          "start": 27.299208333333333,
+          "seconds": 9.44825,
+          "from": 819,
+          "duration": 283
+        }
+      ]
+    },
+    {
+      "id": "insight",
+      "from": 1150,
+      "duration": 169,
+      "lines": [
+        {
+          "text": "Plenty of rewards.",
+          "file": "insight-0.wav",
+          "start": 38.833333333333336,
+          "seconds": 1.2319583333333333,
+          "from": 1165,
+          "duration": 37
+        },
+        {
+          "text": "No reason to come back tomorrow.",
+          "file": "insight-1.wav",
+          "start": 40.41529166666667,
+          "seconds": 1.9612083333333334,
+          "from": 1212,
+          "duration": 59
+        }
+      ]
+    },
+    {
+      "id": "decision1",
+      "from": 1319,
+      "duration": 460,
+      "lines": [
+        {
+          "text": "I compared four places for a daily reward on Home, and picked the one members already use.",
+          "file": "decision1-0.wav",
+          "start": 44.766666666666666,
+          "seconds": 5.499083333333333,
+          "from": 1343,
+          "duration": 165
+        },
+        {
+          "text": "A small wax seal appears on the gift icon only when there's one to open, and the old Toss and Win row still leads there.",
+          "file": "decision1-1.wav",
+          "start": 50.61575,
+          "seconds": 7.477875,
+          "from": 1518,
+          "duration": 224
+        }
+      ]
+    },
+    {
+      "id": "decision2",
+      "from": 1779,
+      "duration": 497,
+      "lines": [
+        {
+          "text": "The seal comes from FirstClub's own Approved stamp. Opening one takes a press and hold for under a second.",
+          "file": "decision2-0.wav",
+          "start": 60.099999999999994,
+          "seconds": 6.557,
+          "from": 1803,
+          "duration": 197
+        },
+        {
+          "text": "A ring fills, the seal cracks, and there's always something useful inside, with nothing to buy first and no countdown.",
+          "file": "decision2-1.wav",
+          "start": 67.00699999999999,
+          "seconds": 7.467083333333333,
+          "from": 2010,
+          "duration": 224
+        }
+      ]
+    },
+    {
+      "id": "decision3",
+      "from": 2276,
+      "duration": 409,
+      "lines": [
+        {
+          "text": "Instead of a streak that resets, any five seals in a week earn a Golden Seal, and members choose the gift.",
+          "file": "decision3-0.wav",
+          "start": 76.66666666666666,
+          "seconds": 6.455041666666666,
+          "from": 2300,
+          "duration": 194
+        },
+        {
+          "text": "Rewards then apply on their own in the cart, with nothing extra to unlock.",
+          "file": "decision3-1.wav",
+          "start": 83.47170833333332,
+          "seconds": 4.625,
+          "from": 2504,
+          "duration": 139
+        }
+      ]
+    },
+    {
+      "id": "result",
+      "from": 2685,
+      "duration": 493,
+      "lines": [
+        {
+          "text": "In a day, I delivered the audit, the main flow, nine edge cases and a clickable prototype, built with AI.",
+          "file": "result-0.wav",
+          "start": 90.3,
+          "seconds": 7.05475,
+          "from": 2709,
+          "duration": 212
+        },
+        {
+          "text": "It isn't built, so next I'd test the hold with members and measure orders against a holdout group.",
+          "file": "result-1.wav",
+          "start": 97.70475,
+          "seconds": 5.842958333333334,
+          "from": 2931,
+          "duration": 175
+        }
+      ]
+    },
+    {
+      "id": "takeaway",
+      "from": 3178,
+      "duration": 174,
+      "lines": [
+        {
+          "text": "Most of the work was finding what the app already had, and connecting it.",
+          "file": "takeaway-0.wav",
+          "start": 106.43333333333334,
+          "seconds": 3.910791666666667,
+          "from": 3193,
+          "duration": 117
+        }
+      ]
+    },
+    {
+      "id": "end",
+      "from": 3352,
+      "duration": 150,
+      "lines": []
+    }
+  ]
+}

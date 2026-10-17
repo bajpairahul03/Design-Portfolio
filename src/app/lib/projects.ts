@@ -29,6 +29,18 @@ import mapFilters from '../../assets/work/map-filters.webp'
 import mapDestination from '../../assets/work/map-destination.webp'
 import mapAttraction from '../../assets/work/map-attraction.webp'
 import tripsCoverLocked from '../../assets/work/trips-cover-locked.webp'
+import sealsCover from '../../assets/work/club-seals-cover.webp'
+import sealsHomeToday from '../../assets/work/club-seals-home-today.webp'
+import sealsHome from '../../assets/work/club-seals-home.webp'
+import sealsHold from '../../assets/work/club-seals-hold.webp'
+import sealsCrack from '../../assets/work/club-seals-crack.webp'
+import sealsReveal from '../../assets/work/club-seals-reveal.webp'
+import sealsWeek from '../../assets/work/club-seals-week.webp'
+import sealsGolden from '../../assets/work/club-seals-golden.webp'
+import sealsCart from '../../assets/work/club-seals-cart.webp'
+import sealsNight from '../../assets/work/club-seals-night.webp'
+import sealsShelf from '../../assets/work/club-seals-shelf.webp'
+import sealsRules from '../../assets/work/club-seals-rules.webp'
 
 export type Metric = { value: string; label: string }
 export type Shot = { src: string; alt: string; width: number; height: number; caption?: string }
@@ -72,12 +84,15 @@ type Teaser = {
   cover: Shot
   // Earlier work is listed on the Work page only, after the featured projects.
   earlier?: true
+  // Self-initiated or challenge work that wasn't built: Work page only, labelled as a concept.
+  concept?: true
 }
 
 // Locked case studies live encrypted in src/protected/<id> and open with a password.
 export type Project = Teaser & ((CaseStudy & { locked?: never }) | { locked: true })
 
 // Screens come from Hardik's Figma case studies and, for earlier work, his previous portfolio. Figures are the ones those sources and his resume report.
+// Club Seals is a design challenge: its screens come from its prototype and its figures describe the work, not results.
 export const projects: Project[] = [
   {
     id: 'store',
@@ -406,5 +421,99 @@ export const projects: Project[] = [
     color: '#f2a65a',
     ink: '#1d1308',
     cover: { src: tripsCoverLocked, alt: 'Blurred preview of Bing Trip Planning with a lock, protected under NDA', width: 1600, height: 1000 },
+  },
+  {
+    id: 'club-seals',
+    name: 'Club Seals',
+    category: 'Rewards and gamification',
+    headline: 'Always something inside.',
+    description: 'In a 24-hour challenge for FirstClub, a premium grocery app, I turned its hidden Toss & Win game into a daily wax seal you hold to open, with something useful inside every time.',
+    summary: 'A 24-hour concept for FirstClub: a daily wax seal that always has something useful inside.',
+    role: 'Product designer',
+    organization: 'FirstClub design challenge',
+    timeline: 'October 2026, in 24 hours',
+    status: 'Concept, not affiliated with FirstClub',
+    team: 'Solo',
+    scope: 'App audit, concept, interaction and motion design, edge cases, and a clickable prototype built with AI',
+    metrics: [
+      { value: '24 hours', label: 'From brief to a clickable prototype' },
+      { value: '18', label: 'Screens in the main flow' },
+      { value: '9', label: 'Edge cases designed' },
+    ],
+    problem: {
+      body: 'The brief asked for a gamified way for members to find and unlock offers, something that gives them a reason to come back and feels like FirstClub. I started with the live app. Offers and rewards already showed up in at least six places, from the gift icon on Home to the cart, and nearly all of them asked for something first: a bigger cart, a first order or a referral. The one game, Toss & Win, sits in the Profile menu, and for a new member it opens to an empty screen with no way to play. A toss can also land on the losing side, which sits badly with a brand built on “tested and tasted”.',
+      stats: [
+        { value: '6+', label: 'Places offers and rewards show up in the app' },
+        { value: '3', label: 'Prompts to spend more on a single cart screen' },
+      ],
+      quote: { text: 'No Rewards Earned Yet. Play to unlock them now', source: 'Toss & Win for a new member, with no button to play' },
+    },
+    insight: 'Plenty of rewards. No reason to come back tomorrow.',
+    contrast: [
+      { title: 'Kept: what members already know', items: ['The gift icon on Home', 'The Toss & Win rewards inbox', "The cart's Gifts for you rail", 'The Free chip and struck-out price', 'The FirstClub Approved stamp'], keep: true },
+      { title: 'Left out: what makes rewards feel like work', items: ['A side that loses', 'Spending more to unlock', 'An empty screen with nothing to do', 'Streaks that reset', 'Countdowns', 'Another pop-up'], keep: false },
+    ],
+    decisions: [
+      {
+        title: 'Put it where members already look',
+        body: "I compared four places for a daily reward on Home: a slide in the hero carousel, a pop-up when the app opens, a new tab and the gift icon. The carousel has six slides, Home opens with a pop-up and the tab bar is full. The gift icon already means rewards, so a small wax seal appears on it only when there's one to open, with a one-time tip for new members. Toss & Win's row in Profile becomes Club Seals, so the old way in keeps working.",
+        flows: [
+          { label: 'Before: rewards behind the Profile menu', steps: ['Profile', 'Toss & Win', 'Empty inbox', 'Nothing to play'] },
+          { label: 'After: a seal on the gift icon', steps: ['Home', 'Gift icon', 'Hold the seal', 'Something inside'] },
+        ],
+        compare: true,
+        shots: [
+          { src: sealsHomeToday, alt: "FirstClub's Home screen today, with the gift and wallet icons at the top right and a Free raisins and cashews banner", width: 900, height: 1948, caption: 'Home today' },
+          { src: sealsHome, alt: 'The same Home screen with a small green wax seal on the gift icon and a one-time tip: a sealed gift waits here every day', width: 900, height: 1948, caption: 'With a seal on the gift icon' },
+        ],
+      },
+      {
+        title: "Make the brand's stamp something you open",
+        body: "FirstClub already has a round “FirstClub Approved” stamp with its F, so I made that stamp into a wax seal. Opening it is a press and hold for under a second: a ring fills, the phone ticks and the seal cracks. Holding gives the moment some weight and stops accidental opens, and letting go early costs nothing. The daily seal never needs a purchase, and there's always something useful inside, most often a member price or free delivery. Every reward is used with an order, so the cost only lands when someone orders. The reveal says what it is and how long it's valid, with no “You won!” and no countdown.",
+        flows: [{ label: 'From their stamp to a seal', steps: ['FirstClub Approved stamp', 'A wax seal with the same F', 'Hold to break it', 'Something inside'] }],
+        shots: [
+          { src: sealsHold, alt: 'Rewards page with the wax seal on an envelope and a red ring filling around it while it is held', width: 900, height: 1948, caption: 'Hold' },
+          { src: sealsCrack, alt: 'The wax seal splitting into two halves on the envelope', width: 900, height: 1948, caption: 'It cracks' },
+          { src: sealsReveal, alt: 'Reveal card: a treat from FC Cafe, a box of six choco chip cookies, free, valid till Wednesday, with progress toward this week', width: 900, height: 1948, caption: "What's inside" },
+        ],
+      },
+      {
+        title: 'Give the week a goal, with no streak to lose',
+        body: "Streaks punish the one day life gets in the way. Instead, any five seals in a week turn the card gold, and the Golden Seal lets members choose one of three gifts, the same way Refer & Earn lets them choose. A seal also comes with every order, opened during the wait for delivery, so five is reachable without opening the app every day. Rewards apply on their own in the cart's Gifts for you rail, with no code and no “shop for ₹X more”.",
+        flows: [
+          { label: 'First try: a daily streak', steps: ['Day 3 streak', 'Miss a day', 'Start again'] },
+          { label: 'Now: any five days in a week', steps: ['Five seals', 'Golden Seal', 'Choose a gift', 'Applied in the cart'] },
+        ],
+        shots: [
+          { src: sealsWeek, alt: 'Rewards page after opening a seal: this week shows 3 of 5 seals, with a gift at the end of the row', width: 900, height: 1948, caption: 'Five in a week' },
+          { src: sealsGolden, alt: 'Golden Seal: choose one of three gifts worth up to 500 rupees, mustard oil, cheese or a week of free delivery', width: 900, height: 1948, caption: 'Choose a gift' },
+          { src: sealsCart, alt: "Cart with the cookies already unlocked in the Gifts for you rail and listed as free from your seal", width: 900, height: 1948, caption: 'Applied in the cart' },
+        ],
+      },
+    ],
+    result: {
+      title: 'Where it landed',
+      body: "I delivered it in 24 hours: an audit of the live app, four directions, the main flow, nine edge cases, motion specs, a component library and a clickable prototype. Most of the edge cases are about not punishing people: missing a day resets nothing, a full shelf asks before anything goes, and the rules and odds are one tap away. It isn't built, so there are no results yet. Next I'd test the hold with five to eight members, then measure weekly seal opens, rewards used and orders per member against a holdout group, with checkout conversion as the guardrail.",
+      changes: [
+        ['A toss with a losing side', 'A seal with something in every one'],
+        ['Only in the Profile menu', "On the gift icon, when there's a seal"],
+        ['Spend more to unlock', 'Rewards that apply on their own'],
+        ['An empty screen for new members', 'A seal waiting on the first visit'],
+      ],
+      shots: [
+        { src: sealsNight, alt: 'After midnight the seal rests on a dark envelope until 6 AM, with an optional reminder', width: 900, height: 1948, caption: 'After midnight' },
+        { src: sealsShelf, alt: 'Sheet for when three rewards are already saved: swap one out for the new one or keep the current three', width: 900, height: 1948, caption: 'Holding three already' },
+        { src: sealsRules, alt: 'How seals work: five rules, the odds for each kind of reward and who can take part', width: 900, height: 1948, caption: 'Rules and odds' },
+      ],
+    },
+    takeaway: {
+      line: 'Most of the work was finding what the app already had, and connecting it.',
+      body: "The gift icon, the rewards inbox, the cart's gift rail, the Free chip and the Approved stamp were all there. The new parts are small: a seal, a hold and a weekly card. I used AI to build the clickable prototype and the Figma file, which is how one person covered the audit, the flow, the edge cases and the motion in a day.",
+    },
+    film: { src: './films/club-seals.mp4', poster: './films/club-seals-poster.jpg', captions: './films/club-seals.vtt', duration: '1:57' },
+    concept: true,
+    color: '#0e4d2e',
+    ink: '#f3ecdc',
+    cover: { src: sealsCover, alt: 'Club Seals Rewards page: a cream envelope closed with a green wax seal, press and hold to open, and this week at 2 of 5', width: 900, height: 1948 },
   },
 ]

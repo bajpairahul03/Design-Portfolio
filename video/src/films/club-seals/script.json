@@ -1,0 +1,42 @@
+{
+  "voice": "am_michael",
+  "speed": 1.08,
+  "fps": 30,
+  "gap": 0.35,
+  "captions": [["twenty-four", "24"], ["Toss and Win", "Toss & Win"]],
+  "scenes": [
+    {"id":"hook","lead":0.7,"tail":2.6, "lines": [
+      "FirstClub's members get rewards in at least six places across the app.",
+      "Its one game, Toss and Win, sits in the Profile menu. For a new member, it opens to an empty screen with nothing to play."
+    ] },
+    {"id":"title","min":4.4, "lines": [] },
+    {"id":"problem","lead":0.6,"tail":1.6, "lines": [
+      "This was a twenty-four hour design challenge, and my audit of the live app found the same pattern everywhere.",
+      "Nearly every reward asked members for something first, a toss can land on the losing side, and nothing gave people a reason to come back between orders."
+    ] },
+    {"id":"insight","lead":0.5,"tail":1.6, "lines": [
+      "Plenty of rewards.",
+      "No reason to come back tomorrow."
+    ] },
+    {"id":"decision1","lead":0.8,"tail":1.2, "lines": [
+      "I compared four places for a daily reward on Home, and picked the one members already use.",
+      "A small wax seal appears on the gift icon only when there's one to open, and the old Toss and Win row still leads there."
+    ] },
+    {"id":"decision2","lead":0.8,"tail":1.4, "lines": [
+      "The seal comes from FirstClub's own Approved stamp. Opening one takes a press and hold for under a second.",
+      "A ring fills, the seal cracks, and there's always something useful inside, with nothing to buy first and no countdown."
+    ] },
+    {"id":"decision3","lead":0.8,"tail":1.4, "lines": [
+      "Instead of a streak that resets, any five seals in a week earn a Golden Seal, and members choose the gift.",
+      "Rewards then apply on their own in the cart, with nothing extra to unlock."
+    ] },
+    {"id":"result","lead":0.8,"tail":2.4, "lines": [
+      "In a day, I delivered the audit, the main flow, nine edge cases and a clickable prototype, built with AI.",
+      "It isn't built, so next I'd test the hold with members and measure orders against a holdout group."
+    ] },
+    {"id":"takeaway","lead":0.5,"tail":1.4, "lines": [
+      "Most of the work was finding what the app already had, and connecting it."
+    ] },
+    {"id":"end","min":5, "lines": [] }
+  ]
+}

@@ -58,8 +58,11 @@ function Compare({ before, after }: { before: Shot; after: Shot }) {
     })
   }, { scope: frame })
 
+  // Phone screens stay phone-sized: full width would make a portrait pair taller than the screen.
+  const portrait = after.height > after.width
+
   return (
-    <figure className="mt-8">
+    <figure className="mt-8" style={portrait ? { maxWidth: `calc(80svh * ${after.width / after.height})` } : undefined}>
       <div
         ref={frame}
         onPointerDown={(event) => {
@@ -68,13 +71,14 @@ function Compare({ before, after }: { before: Shot; after: Shot }) {
           follow(event)
         }}
         onPointerMove={(event) => event.currentTarget.hasPointerCapture(event.pointerId) && follow(event)}
-        className={cn('group/compare relative cursor-ew-resize touch-pan-y select-none overflow-hidden', screen)}
+        className={cn('group/compare relative cursor-ew-resize touch-pan-y select-none overflow-hidden', screen, portrait && 'rounded-[13.5%/6.2%]')}
         style={{ '--split': '50%', aspectRatio: `${after.width} / ${after.height}` } as CSSProperties}
       >
         <img src={after.src} alt={after.alt} width={after.width} height={after.height} loading="lazy" decoding="async" draggable={false} className="absolute inset-0 size-full object-cover" />
         <img src={before.src} alt={before.alt} width={before.width} height={before.height} loading="lazy" decoding="async" draggable={false} className="absolute inset-0 size-full object-cover [clip-path:inset(0_calc(100%_-_var(--split))_0_0)]" />
-        <span aria-hidden="true" className="absolute left-3 top-3 rounded-full bg-black/70 px-2.5 py-1 text-[13px] font-semibold text-white">Before</span>
-        <span aria-hidden="true" className="absolute right-3 top-3 rounded-full bg-black/70 px-2.5 py-1 text-[13px] font-semibold text-white">After</span>
+        {/* On phone screens the labels sit mid-height, clear of the rounded corners, status bar and tab bar. */}
+        <span aria-hidden="true" className={cn('absolute rounded-full bg-black/70 px-2.5 py-1 text-[13px] font-semibold text-white', portrait ? 'left-[5%] top-[40%]' : 'left-3 top-3')}>Before</span>
+        <span aria-hidden="true" className={cn('absolute rounded-full bg-black/70 px-2.5 py-1 text-[13px] font-semibold text-white', portrait ? 'right-[5%] top-[40%]' : 'right-3 top-3')}>After</span>
         <span aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-[var(--split)] w-0.5 -translate-x-1/2 bg-white shadow-[0_0_0_1px_rgb(0_0_0/0.18)]">
           <span className="absolute left-1/2 top-1/2 grid size-11 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-white text-black shadow-[0_8px_24px_rgb(0_0_0/0.35)] group-focus-within/compare:outline-2 group-focus-within/compare:outline-offset-2 group-focus-within/compare:outline-ring">
             <ChevronsLeftRight className="size-5" strokeWidth={2} />

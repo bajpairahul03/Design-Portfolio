@@ -1,0 +1,121 @@
+WEBVTT
+
+1
+00:00:00.700 --> 00:00:04.764
+FirstClub's members get rewards in at least six places across the app.
+
+2
+00:00:05.114 --> 00:00:06.748
+Its one game, Toss & Win,
+
+3
+00:00:06.748 --> 00:00:09.623
+sits in the Profile menu. For a new member,
+
+4
+00:00:09.623 --> 00:00:12.890
+it opens to an empty screen with nothing to play.
+
+5
+00:00:20.500 --> 00:00:22.822
+This was a 24 hour design challenge,
+
+6
+00:00:22.822 --> 00:00:26.949
+and my audit of the live app found the same pattern everywhere.
+
+7
+00:00:27.299 --> 00:00:30.656
+Nearly every reward asked members for something first,
+
+8
+00:00:30.656 --> 00:00:32.894
+a toss can land on the losing side,
+
+9
+00:00:32.894 --> 00:00:36.747
+and nothing gave people a reason to come back between orders.
+
+10
+00:00:38.833 --> 00:00:40.065
+Plenty of rewards.
+
+11
+00:00:40.415 --> 00:00:42.377
+No reason to come back tomorrow.
+
+12
+00:00:44.767 --> 00:00:47.822
+I compared four places for a daily reward on Home,
+
+13
+00:00:47.822 --> 00:00:50.266
+and picked the one members already use.
+
+14
+00:00:50.616 --> 00:00:55.179
+A small wax seal appears on the gift icon only when there's one to open,
+
+15
+00:00:55.179 --> 00:00:58.094
+and the old Toss & Win row still leads there.
+
+16
+00:01:00.100 --> 00:01:06.657
+The seal comes from FirstClub's own Approved stamp. Opening one takes a press and hold for under a second.
+
+17
+00:01:07.007 --> 00:01:08.905
+A ring fills, the seal cracks,
+
+18
+00:01:08.905 --> 00:01:11.690
+and there's always something useful inside,
+
+19
+00:01:11.690 --> 00:01:14.474
+with nothing to buy first and no countdown.
+
+20
+00:01:16.667 --> 00:01:18.615
+Instead of a streak that resets,
+
+21
+00:01:18.615 --> 00:01:21.332
+any five seals in a week earn a Golden Seal,
+
+22
+00:01:21.332 --> 00:01:23.122
+and members choose the gift.
+
+23
+00:01:23.472 --> 00:01:26.222
+Rewards then apply on their own in the cart,
+
+24
+00:01:26.222 --> 00:01:28.097
+with nothing extra to unlock.
+
+25
+00:01:30.300 --> 00:01:33.458
+In a day, I delivered the audit, the main flow,
+
+26
+00:01:33.458 --> 00:01:37.355
+nine edge cases and a clickable prototype, built with AI.
+
+27
+00:01:37.705 --> 00:01:38.599
+It isn't built,
+
+28
+00:01:38.599 --> 00:01:43.548
+so next I'd test the hold with members and measure orders against a holdout group.
+
+29
+00:01:46.433 --> 00:01:49.326
+Most of the work was finding what the app already had,
+
+30
+00:01:49.326 --> 00:01:50.344
+and connecting it.

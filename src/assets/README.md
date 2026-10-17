@@ -141,6 +141,19 @@ quality 80. Bing Trip Planning was password-protected there, so its screens live
 `work/trips-cover-locked.webp` is built the same way from the light "Start
 planning" screen.
 
+Club Seals (`work/club-seals-*.webp`) is a design challenge, not shipped work.
+Its screens are captures of Hardik's coded prototype (repository
+firstclub-club-seals, `npm run dev` on port 5280) at 3x in Microsoft Edge. Only
+the screen is captured: the phone bezel, shadow, page background and Dynamic
+Island are hidden and the shot is taken with a transparent background, so the
+screen's own rounded corners are cut into the alpha channel, like the SMS
+Organizer phone screens. They're resized to 900x1948 and encoded as WebP quality
+80 (alpha quality 100) with Sharp. `club-seals-home-today.webp` is FirstClub's
+live iOS Home screen (Hardik's screenshot, 1170x2532) with the prototype's status
+bar, cut to the same rounded shape, so the before/after slider changes only the
+gift icon and the tip. Product photos inside the prototype are cropped from
+FirstClub's app and App Store listing.
+
 ## Exhibition Covers
 
 The four `cover-*.jpg` images are original renders of the project models in

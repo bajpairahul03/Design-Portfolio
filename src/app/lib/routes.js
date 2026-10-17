@@ -1,4 +1,4 @@
-export const projectIds = ['store', 'portal', 'copilot', 'sms-organizer', 'travel-map', 'trip-planning']
+export const projectIds = ['store', 'portal', 'copilot', 'sms-organizer', 'travel-map', 'trip-planning', 'club-seals']
 
 // Earlier placeholder projects; old links to them land on the Work index.
 const retiredIds = ['hello', 'vr']
