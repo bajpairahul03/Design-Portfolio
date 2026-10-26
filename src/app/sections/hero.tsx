@@ -109,7 +109,7 @@ function HeroStatement() {
         </p>
         <div className="statement-detail mt-8 max-w-[23rem]">
           <p className="text-[17px] leading-relaxed text-muted-foreground">
-            My goal is to create user experiences that are so smooth, users won’t even realize they’re using an interface—just like magic, but with less smoke.
+            My goal is to design experiences so intuitive that the interface gets out of the way, so people can focus on what they came to do.
           </p>
           <Link to="#work/blockbolt-dashboard" className="mt-5 inline-flex items-center gap-1.5 text-[17px] font-semibold underline decoration-1 underline-offset-[6px] hover:decoration-2">
             See the BlockBolt case study <ArrowUpRight aria-hidden="true" className="size-4" strokeWidth={2} />

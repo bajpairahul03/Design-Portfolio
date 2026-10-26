@@ -49,19 +49,19 @@ export const stories = {
     name: 'Working notebook', object: 'The open notebook', category: 'Design practice', title: 'A thought, made tangible.',
     description: 'How I move from understanding a problem, to shaping the design, to building it.',
     color: 'blue', pages: [
-      { title: 'Research', text: 'I start with stakeholder interviews, competitor analysis and user feedback, then turn what I learn into a user persona and an empathy map, so I design for the right audience.', items: ['Usability testing & user research', 'Stakeholder interviews', 'User persona', 'Empathy map'] },
-      { title: 'Design', text: 'I map user flows and information architecture, then move to typography, colours and layout, turning complex challenges into simple, intuitive designs.', items: ['User flows', 'Interaction design', 'UI design & prototyping', 'Marketing materials & visual branding'] },
-      { title: 'Build', text: 'I develop responsive front-end code using HTML, CSS, and React, and collaborate with developers to deliver functional, user-centric designs.', items: ['Front-end development', 'Responsive web design', 'WordPress theme styling & customization', 'Collaboration with team'] },
+      { title: 'Research', text: 'Every project starts with the problem, not the screen. I align with stakeholders on business goals, talk to users, audit the current product and study competitors, then distil it into the insights and success metrics that guide every decision after.', items: ['Stakeholder alignment', 'User interviews & usability testing', 'UX audits & competitor analysis', 'Personas & journey mapping'] },
+      { title: 'Design', text: 'I shape the structure first, with information architecture, user flows and wireframes, then bring it to life in high-fidelity UI and interactive prototypes. I build on a design system, test with real users and iterate until the complex feels obvious.', items: ['Information architecture & user flows', 'Wireframing & prototyping', 'Design systems', 'Interaction & visual design'] },
+      { title: 'Build', text: 'Design isn’t done until it ships. I hand off developer-ready specs, every state and edge case included, review builds closely, and write front-end code in HTML, CSS and React myself, so what launches matches what we designed.', items: ['Developer handoff & design QA', 'Front-end development (HTML, CSS, React)', 'Responsive & accessible design', 'Cross-functional collaboration'] },
     ],
   },
   about: {
     name: 'Behind the work', object: 'The blue frame', category: 'About Rahul', title: 'Hello, I\'m Rahul Bajpai.',
     description: 'A designer who sees the big picture in every pixel.', color: 'blue',
     sections: [
-      ['Where I\'m from', 'Originally from Balaghat, Madhya Pradesh.'],
-      ['What I do', 'I\'m a UI/UX & Product Designer with 4.5+ years of experience designing user-centric digital products, websites, and dashboards. I turn complex challenges into simple, intuitive designs.'],
-      ['My goal', 'To create user experiences that are so smooth, users won\'t even realize they\'re using an interface—just like magic, but with less smoke.'],
-      ['Take a look', 'Take a look at my work—no users were harmed in the making of these designs!'],
+      ['Where I\'m from', 'I grew up in Balaghat, Madhya Pradesh, and studied Computer Science & Engineering in Bhopal before moving into design.'],
+      ['What I do', 'I\'m a UI/UX & Product Designer with 4.5+ years of experience across SaaS platforms, websites, mobile apps and dashboards. I take complex products and workflows and turn them into clear, intuitive experiences, from early research through to developer handoff.'],
+      ['My goal', 'To design experiences so intuitive that the interface gets out of the way, so people can focus on what they came to do and the business sees the results.'],
+      ['Take a look', 'The case studies that follow walk through the problem, the process and the outcome behind each project.'],
       ['Design\'N\'Buy', 'UI/UX & Product Designer, March 2025 to now. I led the UX redesign of DesignO, revamping a 14-year-old flagship product into a modern and scalable platform, and contribute to product strategy, design systems, and UX improvements for enterprise-level web-to-print solutions.'],
       ['MCS Ventures', 'UI/UX Designer, December 2022 to March 2025. I designed user-friendly mobile apps, websites, and dashboards, created social media assets and marketing creatives, developed responsive front-end interfaces using HTML, CSS, and React, and styled and customized WordPress websites.'],
       ['iCONEX India', 'Web Designer, November 2021 to November 2022. I designed interactive website layouts and marketing assets for digital campaigns, developed branding visuals, and assisted in front-end development and UI improvements.'],
@@ -70,11 +70,11 @@ export const stories = {
   },
   explore: {
     name: 'Beyond the brief', object: 'The telescope', category: 'Personal interests', title: 'There is always more to see.',
-    description: '[Placeholder] A few things that keep me curious outside the work.', color: 'green',
+    description: 'A few things that keep me curious outside the work.', color: 'green',
     sections: [
-      ['Interest one', '[Placeholder] Something you enjoy outside work, and what it gives back to your design.'],
-      ['Interest two', '[Placeholder] Something you enjoy outside work, and what it gives back to your design.'],
-      ['Interest three', '[Placeholder] Something you enjoy outside work, and what it gives back to your design.'],
+      ['Photography', 'Chasing light with a camera trains me to notice framing, contrast and the small moments people miss, the same eye I bring to a layout.'],
+      ['Guitar', 'Hours of practice for one clean riff. Guitar taught me that rhythm, repetition and patience are what make anything feel effortless.'],
+      ['Travel', 'New places mean new signage, new apps and new habits. Watching how strangers find their way is free usability research.'],
     ],
   },
 }

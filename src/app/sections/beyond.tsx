@@ -1,8 +1,10 @@
 import { useRef } from 'react'
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, Camera, Guitar, Plane, ShoppingBag, type LucideIcon } from 'lucide-react'
 import { gsap, useGSAP, motionOk } from '@/lib/gsap'
 import { Link } from '@/lib/navigation'
 import { interests, photos } from '@/lib/content'
+
+const interestIcons: Record<string, LucideIcon> = { Photography: Camera, Guitar, Travel: Plane, Shopping: ShoppingBag }
 
 export function BeyondWork() {
   const root = useRef<HTMLElement>(null)
@@ -34,15 +36,21 @@ export function BeyondWork() {
         <div className="md:col-span-6 md:col-start-7">
           <h2 id="beyond-title" className="display text-[clamp(3rem,7vw,7.75rem)]">Still curious.</h2>
           <p className="mt-6 max-w-[34ch] text-[clamp(1.2rem,1.6vw,1.5rem)] leading-snug">
-            [Placeholder] A line about what keeps you curious outside work.
+            Away from the screen I chase light with a camera, play guitar and get lost in new cities. It all finds its way back into the work.
           </p>
           <dl className="interests mt-12 grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-2">
-            {interests.map((interest) => (
-              <div key={interest.title} className="interest border-t border-foreground/80 pt-4">
-                <dt className="text-xl font-bold tracking-[-0.02em] [font-stretch:108%]">{interest.title}</dt>
-                <dd className="mt-1.5 text-[17px] leading-relaxed text-muted-foreground">{interest.text}</dd>
-              </div>
-            ))}
+            {interests.map((interest) => {
+              const Icon = interestIcons[interest.title]
+              return (
+                <div key={interest.title} className="interest border-t border-foreground/80 pt-4">
+                  <dt className="flex items-center gap-2.5 text-xl font-bold tracking-[-0.02em] [font-stretch:108%]">
+                    {Icon && <Icon aria-hidden="true" className="size-5 shrink-0" strokeWidth={1.75} />}
+                    {interest.title}
+                  </dt>
+                  <dd className="mt-1.5 text-[17px] leading-relaxed text-muted-foreground">{interest.text}</dd>
+                </div>
+              )
+            })}
           </dl>
           <Link to="#about" className="mt-12 inline-flex items-center gap-1.5 text-[17px] font-semibold underline decoration-1 underline-offset-[6px] hover:decoration-2">
             More about me <ArrowUpRight aria-hidden="true" className="size-4" strokeWidth={2} />

@@ -35,7 +35,7 @@ export function InTheirWords() {
     <section ref={root} id="in-their-words" aria-labelledby="words-title" className="px-5 py-[clamp(6rem,16vh,11rem)] md:px-10">
       <div className="grid gap-6 md:grid-cols-12 md:items-end md:gap-8">
         <h2 id="words-title" className="display text-[clamp(2.75rem,5.4vw,5.75rem)] md:col-span-7">In their words.</h2>
-        <p className="max-w-[36ch] text-[17px] leading-relaxed text-muted-foreground md:col-span-4 md:col-start-9">[Placeholder] Notes from the people I work with.</p>
+        <p className="max-w-[36ch] text-[17px] leading-relaxed text-muted-foreground md:col-span-4 md:col-start-9">Notes from the people I’ve designed, built and shipped with.</p>
       </div>
 
       <div className="words-board mt-[clamp(3rem,8vh,5rem)] rounded-[28px] border border-border p-4 sm:p-6 md:p-10">

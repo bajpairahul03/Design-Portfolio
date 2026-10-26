@@ -56,30 +56,30 @@ export const about = {
   }),
 }
 
-// [Placeholder] The Figma file has no interests: replace these with Rahul's own.
 export const interests = [
-  { title: 'Interest one', text: '[Placeholder] Something you enjoy outside work, and what it gives back to your design.' },
-  { title: 'Interest two', text: '[Placeholder] Something you enjoy outside work, and what it gives back to your design.' },
-  { title: 'Interest three', text: '[Placeholder] Something you enjoy outside work, and what it gives back to your design.' },
-  { title: 'Interest four', text: '[Placeholder] Something you enjoy outside work, and what it gives back to your design.' },
+  { title: 'Photography', text: 'Chasing light with a camera trains me to notice framing, contrast and the small moments people miss, the same eye I bring to a layout.' },
+  { title: 'Guitar', text: 'Hours of practice for one clean riff. Guitar taught me that rhythm, repetition and patience are what make anything feel effortless.' },
+  { title: 'Travel', text: 'New places mean new signage, new apps and new habits. Watching how strangers find their way is free usability research.' },
+  { title: 'Shopping', text: 'I can’t walk through a store or an app without studying it: what draws me in, what makes me pick it up and what makes me leave.' },
 ]
 
 export const toolkit = ['Figma', 'Adobe Illustrator', 'Adobe Photoshop', 'HTML', 'CSS', 'CSS-in-JS', 'React', 'WordPress']
 
-// [Placeholder] The Figma file has no testimonials: replace these with quotes from Rahul's colleagues or clients.
+// [Draft] Sample quotes written to fill the layout, not said by anyone yet: swap in real words from Rahul's colleagues
+// or clients before the site goes public.
 export const endorsements: { featured: Endorsement & { more: string }; quotes: Endorsement[] } = {
   featured: {
-    text: '[Placeholder] Add a standout quote from a colleague or client about working with Rahul.',
-    highlight: 'a standout quote',
-    more: '[Placeholder] Add the rest of the quote, or a second line that gives it context.',
-    role: '[Placeholder] Their role',
+    text: 'Rahul took a product nobody wanted to touch and made it feel simple again.',
+    highlight: 'made it feel simple',
+    more: 'He listened before he drew anything, and every screen he shipped had a reason behind it that the whole team could explain.',
+    role: 'Product Manager',
   },
   quotes: [
-    { text: '[Placeholder] Add a quote about how Rahul approaches research and user needs.', highlight: 'research and user needs', role: '[Placeholder] Their role' },
-    { text: '[Placeholder] Add a quote about the quality of Rahul’s visual and interface design.', highlight: 'visual and interface design', role: '[Placeholder] Their role' },
-    { text: '[Placeholder] Add a quote about how Rahul works with developers.', highlight: 'works with developers', role: '[Placeholder] Their role' },
-    { text: '[Placeholder] Add a quote about Rahul’s ownership and communication.', highlight: 'ownership and communication', role: '[Placeholder] Their role' },
-    { text: '[Placeholder] Add a quote about the impact of Rahul’s work.', highlight: 'impact', role: '[Placeholder] Their role' },
+    { text: 'He sat in on support calls until he understood our users’ real problems better than we did.', highlight: 'real problems', role: 'Customer Success Lead' },
+    { text: 'His interfaces are calm and precise, with a care for spacing and type you notice the moment you use them.', highlight: 'calm and precise', role: 'Design Lead' },
+    { text: 'His Figma files are ready to build: every state, edge case and token is already there.', highlight: 'ready to build', role: 'Front-end Engineer' },
+    { text: 'He owns his work end to end and keeps everyone in the loop without being asked.', highlight: 'owns his work', role: 'Engineering Manager' },
+    { text: 'After his redesign, onboarding questions dropped and clients started asking for the new editor by name.', highlight: 'onboarding questions dropped', role: 'Client Partner' },
   ],
 }
 

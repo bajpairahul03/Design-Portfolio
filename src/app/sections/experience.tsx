@@ -50,9 +50,10 @@ export function Experience() {
         </div>
         <ol className="jobs md:col-span-8 md:col-start-5">
           {experience.map((job) => (
-            <li key={`${job.company} ${job.dates}`} className="job grid grid-cols-[1fr_auto] items-baseline gap-x-6 gap-y-1 border-b border-border py-7 first:pt-0 md:grid-cols-[1.25fr_1fr_auto]">
+            <li key={`${job.company} ${job.dates}`} className="job grid grid-cols-[1fr_auto] items-baseline gap-x-6 gap-y-1 border-b border-border py-7 first:pt-0 md:grid-cols-[1.25fr_1fr_10rem]">
               <p className="text-[clamp(1.6rem,2.9vw,2.9rem)] font-bold leading-tight tracking-[-0.035em] [font-stretch:108%]">{job.company}</p>
-              <p className="tabular text-[15px] font-medium text-muted-foreground md:order-last">{job.dates}</p>
+              {/* A fixed date column keeps the role column lined up across rows, whatever each date range's length. */}
+              <p className="tabular text-right text-[15px] font-medium text-muted-foreground md:order-last">{job.dates}</p>
               <p className="col-span-2 text-[17px] md:col-span-1">{job.role}</p>
             </li>
           ))}
