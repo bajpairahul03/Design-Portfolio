@@ -46,7 +46,7 @@ function Chrome({ timeline, accent, name }: { timeline: Timeline; accent: string
     <>
       <div style={{ position: 'absolute', left: 0, top: 0, height: 4, width: `${(f / durationInFrames) * 100}%`, background: `linear-gradient(90deg, ${accent}, ${C.rose})` }} />
       <div style={{ ...body, position: 'absolute', left: 160, right: 160, top: 50, display: 'flex', justifyContent: 'space-between', fontSize: 22, opacity: visible }}>
-        <span><span style={{ fontWeight: 640 }}>Hardik Agarwal</span><span style={{ color: C.mute }}>{`  ·  ${name}`}</span></span>
+        <span><span style={{ fontWeight: 640 }}>Rahul Bajpai</span><span style={{ color: C.mute }}>{`  ·  ${name}`}</span></span>
         <span style={{ color: C.mute, opacity: label ? Math.min(tw(local, 0, 14), 1 - tw(local, s.duration - 12, 12)) : 0 }}>{label}</span>
       </div>
     </>
@@ -280,11 +280,11 @@ export function TakeawayCard({ scene, lines, size = 80, width = 1600 }: { scene:
 export function EndCard({ note = 'Narrated with an AI voice' }: { note?: string }) {
   return (
     <AbsoluteFill style={{ justifyContent: 'center', padding: '0 160px' }}>
-      <Rise at={6} style={{ ...display, fontSize: 150 }}>Hardik Agarwal</Rise>
+      <Rise at={6} style={{ ...display, fontSize: 150 }}>Rahul Bajpai</Rise>
       <Rise at={14} style={{ ...heading, fontSize: 50, color: C.mute, marginTop: 28 }}>Product designer</Rise>
       <Rise at={26} style={{ marginTop: 76, display: 'flex', gap: 20, alignItems: 'baseline' }}>
         <span style={{ ...body, fontSize: 32 }}>Read the full case study at</span>
-        <span style={{ ...body, fontSize: 32, color: C.rose, fontWeight: 600 }}>hardikk-agarwal.github.io/Design-Portfolio</span>
+        <span style={{ ...body, fontSize: 32, color: C.rose, fontWeight: 600 }}>bajpairahul03.github.io/Design-Portfolio</span>
       </Rise>
       <Rise at={34} style={{ ...body, position: 'absolute', right: 160, bottom: 84, fontSize: 22, color: C.mute }}>{note}</Rise>
     </AbsoluteFill>

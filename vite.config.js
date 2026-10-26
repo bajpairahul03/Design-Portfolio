@@ -5,8 +5,8 @@ import { viteSingleFile } from 'vite-plugin-singlefile'
 import { fileURLToPath } from 'node:url'
 import { existsSync, readdirSync, statSync } from 'node:fs'
 
-const entries = { production: './index.html', pages: './index.html', desk: './desk.html', story: './story.html' }
-const outDirs = { production: 'dist', pages: 'dist', desk: 'dist/desk', story: 'dist/story' }
+const entries = { production: './index.html', pages: './index.html' }
+const outDirs = { production: 'dist', pages: 'dist' }
 const sealedFile = fileURLToPath(new URL('./src/app/lib/sealed-case-studies.json', import.meta.url))
 const protectedSource = fileURLToPath(new URL('./src/protected/', import.meta.url))
 
@@ -56,8 +56,7 @@ export default defineConfig(({ command, mode }) => {
   if (command === 'build' && (mode === 'production' || pages)) checkSealed()
   return {
     base: pages ? './' : '/',
-    // public/ holds the resume PDF for the portfolio; the archived desk and story builds generate their own.
-    publicDir: mode === 'desk' || mode === 'story' ? false : 'public',
+    publicDir: 'public',
     plugins: [react(), tailwindcss(), pages ? preloadCritical() : viteSingleFile()],
     resolve: {
       alias: [{ find: /^@\//, replacement: fileURLToPath(new URL('./src/app/', import.meta.url)) }],
