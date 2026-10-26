@@ -32,7 +32,7 @@ export function ResumePage() {
           </a>
         </div>
         <p className="mt-10 max-w-[48ch] text-[clamp(1.2rem,1.7vw,1.6rem)] leading-snug">
-          I'm a UI/UX & Product Designer with 4.5+ years of experience designing user-centric digital products, websites, and dashboards. At Design'N'Buy I led the redesign of DesignO, a 14-year-old flagship product, into a modern and user-focused platform. I'm skilled in UX strategy, wireframing, prototyping, and creating scalable, intuitive user experiences.
+          I'm a UI/UX & Product Designer with 5 years of experience across SaaS platforms, dashboards, mobile apps and websites. At Design'N'Buy I led the end-to-end redesign of DesignO, a 14-year-old web-to-print editor, from audit to launch in 10 months. I work from UX strategy to design systems, and I write front-end code myself.
         </p>
       </section>
 

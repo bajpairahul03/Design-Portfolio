@@ -114,8 +114,8 @@ test('project readers use a unique heading and provide onward navigation', () =>
 test('the about page introduces Rahul before his career history', () => {
   const markup = readerMarkup('about')
   assert.ok(markup.includes('Balaghat'))
-  assert.ok(markup.includes('big picture in every pixel'))
-  assert.ok(markup.indexOf('<h3>Take a look</h3>') < markup.indexOf('<h3>MCS Ventures</h3>'))
+  assert.ok(markup.includes('complex products feel simple'))
+  assert.ok(markup.indexOf('<h3>How I work</h3>') < markup.indexOf('<h3>MCS Ventures</h3>'))
   assert.ok(markup.indexOf('<h3>What I do</h3>') < markup.indexOf('<h3>MCS Ventures</h3>'))
   assert.ok(markup.includes('id="reader-title"'))
 })

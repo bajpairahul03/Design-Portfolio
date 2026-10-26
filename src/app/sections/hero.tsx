@@ -17,7 +17,7 @@ let introPlayed = false
 // Pins and boxes are fractions of the 1164 × 1106 portrait, so each note stays on its body part at any crop.
 // Order is priority: when a column runs out of room, the last notes are dropped first.
 const notes: Note[] = [
-  { id: 'head', part: 'Head', title: 'I see the big picture', text: 'A designer who sees the big picture in every pixel.', side: 'right', pin: [0.53, 0.2], box: [0.408, 0.156, 0.576, 0.4] },
+  { id: 'head', part: 'Head', title: 'I see the big picture', text: 'Every screen answers to a user need and a business goal.', side: 'right', pin: [0.53, 0.2], box: [0.408, 0.156, 0.576, 0.4] },
   { id: 'eyes', part: 'Eyes', title: 'I research before I design', text: 'Stakeholder interviews, competitor analysis and user feedback shape each design.', side: 'left', pin: [0.5, 0.27], box: [0.46, 0.256, 0.546, 0.288] },
   { id: 'heart', part: 'Heart', title: 'I’m from Balaghat', text: 'Originally from Balaghat, Madhya Pradesh.', side: 'right', pin: [0.62, 0.575], box: [0.56, 0.5, 0.72, 0.688] },
   { id: 'zip', part: 'Zip', title: 'I keep it simple', text: 'I turn complex challenges into simple, intuitive designs.', side: 'right', pin: [0.455, 0.65], box: [0.44, 0.475, 0.47, 0.988] },
@@ -77,7 +77,7 @@ function HeroStage() {
             <p className="mb-4 text-[15px] font-semibold md:text-base">
               UI/UX & Product Designer at <span className="whitespace-nowrap">Design'N'Buy</span>
             </p>
-            <p className="text-lg leading-snug md:text-[1.35rem]">A designer who sees the big picture in every pixel.</p>
+            <p className="text-lg leading-snug md:text-[1.35rem]">I make complex products feel simple. Most recently, I led the redesign of DesignO, a 14-year-old web-to-print editor.</p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link to="#selected-work" className="inline-flex h-12 items-center gap-2 rounded-full bg-[#f4f4f1] px-6 text-[15px] font-semibold text-[#111315] transition-transform active:scale-[0.97]">
                 View work <ArrowDown aria-hidden="true" className="size-4" strokeWidth={2} />
@@ -110,10 +110,10 @@ function HeroStatement() {
         </p>
         <div className="statement-detail mt-8 max-w-[23rem]">
           <p className="text-[17px] leading-relaxed text-muted-foreground">
-            My goal is to design experiences so intuitive that the interface gets out of the way, so people can focus on what they came to do.
+            Like a 14-year-old editor, rebuilt around the four things every shopper does: choose, design, check and buy.
           </p>
-          <Link to="#work/blockbolt-dashboard" className="mt-5 inline-flex items-center gap-1.5 text-[17px] font-semibold underline decoration-1 underline-offset-[6px] hover:decoration-2">
-            See the BlockBolt case study <ArrowUpRight aria-hidden="true" className="size-4" strokeWidth={2} />
+          <Link to="#work/designo" className="mt-5 inline-flex items-center gap-1.5 text-[17px] font-semibold underline decoration-1 underline-offset-[6px] hover:decoration-2">
+            See the DesignO case study <ArrowUpRight aria-hidden="true" className="size-4" strokeWidth={2} />
           </Link>
         </div>
       </div>

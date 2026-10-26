@@ -16,7 +16,7 @@ export const photos = { cameraPortrait: portrait, cameraChip: chip, candid: port
 export const email = 'work.rahulbajpai@gmail.com'
 export const phone = { label: '+91 95894 24837', href: 'tel:+919589424837' }
 export const profiles = [
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/rahulbajpai-uxdesigner/' },
+  { label: 'LinkedIn', href: 'https://in.linkedin.com/in/rahulbajpai-uxdesigner' },
 ]
 
 export function projectById(id: ProjectId) {

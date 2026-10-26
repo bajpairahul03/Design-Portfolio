@@ -20,6 +20,8 @@ npm run build
 
 `check` type-checks the React app, syntax-checks the legacy scripts, and runs the route and journey tests. The build produces a self-contained [dist/index.html](dist/index.html) that embeds its JavaScript, CSS, fonts, and images and opens directly from disk. The resume PDF ships beside it as `dist/Rahul_Bajpai_Resume.pdf`.
 
+The PDF's source is [scripts/resume.html](scripts/resume.html). After editing it, run `npm run resume` to print it to `public/Rahul_Bajpai_Resume.pdf` with headless Chrome or Edge, and check it still fits on one page. Keep its wording in step with the resume in `src/surfaces.js`.
+
 ## Password-Protected Case Study
 
 A case study can ship encrypted. Its readable source is `src/protected/<id>/` (`case-study.json` plus its screens). That folder and `.env.local` are git-ignored and stay on this machine.

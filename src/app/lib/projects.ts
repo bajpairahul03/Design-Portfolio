@@ -66,7 +66,8 @@ type Teaser = {
   organization: string
   timeline?: string
   status?: string
-  team: string
+  // Left out until Rahul confirms who he worked with; the case study then skips the Team row.
+  team?: string
   scope: string
   metrics: Metric[]
   color: string
@@ -90,8 +91,8 @@ export const projects: Project[] = [
     name: 'DesignO',
     category: 'Product redesign · Web-to-print',
     headline: 'One editor for everything a print shop sells.',
-    description: "My director asked me to redesign DesignO, Design'N'Buy's 14-year-old flagship product designer. I designed the complete revamp, UX and UI, in 10 months, and it launched in March 2026 as one modern editor for merchandise, printing, packaging and photo books.",
-    summary: "I designed the complete revamp of a 14-year-old web-to-print editor in 10 months, from research and flows to the final UI and design system.",
+    description: "Design'N'Buy's director asked me to redesign DesignO, the company's 14-year-old flagship product designer. I owned the revamp end to end, UX and UI, and in 10 months it launched as one editor for merchandise, printing, packaging and photo books.",
+    summary: "I led the end-to-end redesign of a 14-year-old web-to-print editor, turning products that each worked differently into one editor and design system, launched in 10 months.",
     role: 'Lead UI/UX & Product Designer',
     organization: "Design'N'Buy",
     timeline: 'May 2025 to March 2026',
@@ -193,15 +194,13 @@ export const projects: Project[] = [
     ],
     result: {
       title: 'Outcome',
-      body: "The revamped DesignO launched in March 2026, ten months after the brief, and clients have welcomed it. The same editor now runs merchandise, printing, packaging and photo book products, with shared tools and print guides, product-specific panels where they are needed, a 2D and 3D preview and a live price.",
-      // [Placeholder] Replace with the real post-launch figures before publishing.
-      metrics: [
-        { value: '[X]%', label: '[Placeholder] Growth since the March 2026 launch' },
-        { value: '[X]%', label: '[Placeholder] Second result, for example orders or conversion' },
-        { value: '[X]', label: '[Placeholder] Clients live on the new editor' },
+      body: "The revamped DesignO launched in March 2026, ten months after the brief, and clients have welcomed it. One editor now runs merchandise, printing, packaging and photo books: shared tools and print guides, product-specific panels only where needed, a 2D and 3D preview and a price that is always visible. For the business, a new product type is now configuration work, not a new interface.",
+      // [Placeholder] Add post-launch metrics here once Rahul has real figures, such as conversion or clients live.
+      changes: [
+        ['A 14-year-old flagship product', 'A modern, scalable platform'],
+        ['A different way of working per product', 'One editor shell for every product'],
+        ['Print rules in production language', 'Guides shoppers can see on the canvas'],
       ],
-      changes: [['A 14-year-old flagship product', 'A modern, scalable platform']],
-      note: 'Placeholder figures: real post-launch numbers to follow.',
     },
     takeaway: {
       line: 'A platform scales when a new product is configuration, not a new interface.',
@@ -215,9 +214,9 @@ export const projects: Project[] = [
     id: 'blockbolt-dashboard',
     name: 'BlockBolt Dashboard',
     category: 'Dashboard design',
-    headline: 'End-to-end UI/UX design for a secure blockchain-powered platform.',
-    description: 'The BlockBolt Merchant Dashboard is a user-friendly platform designed for merchants to manage transactions, track analytics, and streamline operations.',
-    summary: 'I designed the BlockBolt merchant dashboard end to end, from research to a sleek, responsive interface.',
+    headline: 'Crypto payments, made manageable for everyday merchants.',
+    description: 'As the solo designer, I took the BlockBolt merchant dashboard from research to final UI: nine modules for accepting payments, invoicing, running a POS and tracking revenue across ICP, Solana and SUI.',
+    summary: 'As the solo designer, I designed BlockBolt’s merchant dashboard end to end, from personas and information architecture to nine modules of UI.',
     role: 'Solo UI/UX designer',
     organization: 'BlockBolt',
     timeline: 'March 2024 to now',
@@ -228,7 +227,7 @@ export const projects: Project[] = [
       { value: '3', label: 'Chains in orders: ICP, Solana and SUI' },
     ],
     problem: {
-      body: 'BlockBolt is a decentralized payment system that makes crypto transactions easy, fast, and secure. It offers tools for businesses to accept payments online and in stores, a secure wallet for users, and features like automated recurring payments. But many businesses face challenges integrating cryptocurrency payments due to complex processes and lack of easy-to-use tools, consumers struggle to find secure, reliable, and user-friendly platforms, and both are wary of the security risks involved in handling digital currencies.',
+      body: 'BlockBolt is a decentralized payment system: businesses accept crypto online and in stores, users hold a secure wallet, and payments can recur automatically. The barrier is not the technology but the experience. Merchants find crypto setups complex and the tools hard to use, and both merchants and their customers worry about the security of handling digital currency.',
       quote: { text: 'I want to accept crypto payments, but it seems complicated and unclear.', source: 'Sarah Thompson, user persona: a small business owner, 32, moderately tech-savvy' },
     },
     insight: 'Users need a hassle-free, intuitive way to make and accept crypto payments without complex setups or confusing workflows.',
@@ -262,7 +261,7 @@ export const projects: Project[] = [
     ],
     result: {
       title: 'Outcome',
-      body: 'I prioritized simplicity, security, and ease of use based on user goals and pain points, and designed for easy onboarding, real-time tracking, and strong security. The result is a clean, intuitive interface that enhances trust and ensures a seamless experience, from tracking payouts to running quests and fine-tuning settings.',
+      body: 'Payments, invoices, POS, paylinks, orders, payouts, quests and settings now share one structure and one visual language. A merchant new to crypto can see what came in, on which chain, and what to do next, without learning blockchain terms first.',
       shots: [
         { src: universalScreen, alt: 'BlockBolt Universal page listing completed payouts with their transaction details', width: 1600, height: 764, caption: 'Universal' },
         { src: questScreen, alt: 'BlockBolt Quest page with current quests and a leaderboard', width: 1600, height: 764, caption: 'Quest' },
@@ -271,8 +270,8 @@ export const projects: Project[] = [
       ],
     },
     takeaway: {
-      line: 'The design is all about creating a smooth experience while ensuring easy navigation and safeguarding sensitive information.',
-      body: 'I chose Nunito for its modern, clean look that ensures readability across the BlockBolt dashboard. Its rounded, friendly style adds approachability while maintaining professionalism, for both headings and body text.',
+      line: 'In payments, clarity is part of security: merchants trust what they can read at a glance.',
+      body: 'Even the typeface served that goal. I chose Nunito for headings and body text: it stays readable in dense tables, and its rounded forms make an unfamiliar product feel approachable without losing professionalism.',
     },
     color: '#f5b82e',
     ink: '#141414',
@@ -283,11 +282,10 @@ export const projects: Project[] = [
     name: 'BlockBolt App',
     category: 'App design',
     headline: 'Payment simplified, decentralized.',
-    description: 'The BlockBolt App is a secure and user-friendly platform for managing digital transactions.',
-    summary: 'I designed a streamlined app for smooth navigation, quick payment processing, and real-time updates.',
+    description: 'BlockBolt’s wallet app for payments on the Sui blockchain. I designed the way in and the payment flow so that paying a merchant reads as a short, clear sequence, with no technical knowledge needed.',
+    summary: 'I designed the onboarding and payment flow of BlockBolt’s Sui wallet, so paying a merchant needs no technical knowledge.',
     role: 'UI/UX designer',
     organization: 'BlockBolt',
-    team: '[Placeholder] Add who you worked with',
     scope: 'Splash screen, wallet and payment process',
     metrics: [
       { value: '3', label: 'Screens in the payment process' },
@@ -313,7 +311,7 @@ export const projects: Project[] = [
       },
     ],
     result: {
-      body: 'I focused on designing a streamlined interface that ensures smooth navigation, quick payment processing, and real-time updates, offering users an efficient and modern experience.',
+      body: 'From the splash screen to a confirmed transaction, each screen answers one question at a time: who am I paying, with what, and did it go through? The confirmation keeps the transaction ID and an explorer link one tap away for anyone who wants proof.',
     },
     takeaway: { line: 'Secure crypto payments, without needing technical knowledge.' },
     color: '#2b2f8f',
@@ -329,7 +327,6 @@ export const projects: Project[] = [
     summary: 'Social media designs for Blockbolt and PocketPay, built on clear messaging and strong visuals.',
     role: 'Social media designer',
     organization: 'Blockbolt & PocketPay',
-    team: '[Placeholder] Add who you worked with',
     scope: 'Campaign posts for Blockbolt NFTs and PocketPay',
     metrics: [
       { value: '2', label: 'Brands: Blockbolt and PocketPay' },
@@ -369,7 +366,6 @@ export const projects: Project[] = [
     summary: 'A UK map-inspired logo for Linq50, symbolizing connectivity and collaboration.',
     role: 'Logo designer',
     organization: 'Linq50',
-    team: '[Placeholder] Add who you worked with',
     scope: 'Logo, colour palette, typography and brand applications',
     metrics: [
       { value: '5', label: 'Colours in the palette' },

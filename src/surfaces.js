@@ -2,21 +2,21 @@ import { stories, storyMarkup } from './stories.js'
 
 export const resumeSections = [
   ["UI/UX & Product Designer | Design'N'Buy | Mar 2025 - Present", [
-    'Led the UX redesign of DesignO, revamping a 14-year-old flagship product into a modern and scalable platform.',
-    'Designed user-centric workflows, wireframes, prototypes, and responsive interfaces focused on improving product experience.',
-    'Collaborated with cross-functional teams and developers to ensure seamless implementation and consistency across the product.',
-    'Contributed to product strategy, design systems, and overall UX improvements for enterprise-level web-to-print solutions.',
+    'Led the end-to-end UX and UI redesign of DesignO, Design\'N\'Buy\'s 14-year-old flagship editor, from audit to launch in 10 months.',
+    'Unified merchandise, printing, packaging and photo books into one editor with live pricing, print guides and a 2D/3D preview.',
+    'Built the design system and responsive layouts that carry the same components from desktop to tablet to phone.',
+    'Shaped product strategy with stakeholders and reviewed builds with developers through launch.',
   ]],
   ['UI/UX Designer | MCS Ventures | Dec 2022 - Mar 2025', [
-    'Designed user-friendly mobile apps, websites, and dashboards, ensuring an intuitive user experience across platforms.',
-    'Created visually engaging social media assets and marketing creatives aligned with brand guidelines and user engagement goals.',
-    'Developed responsive front-end interfaces using HTML, CSS, and React, focusing on usability and performance.',
-    'Styled and customized WordPress websites while collaborating with developers to implement and refine UI/UX experiences.',
+    'Designed mobile apps, websites and dashboards end to end, from user flows and wireframes to high-fidelity UI.',
+    'Built responsive front-end interfaces in HTML, CSS and React, keeping what shipped close to what was designed.',
+    'Created social media and marketing design within brand guidelines.',
+    'Styled and customized WordPress websites alongside developers.',
   ]],
   ['Web Designer | iCONEX India | Nov 2021 - Nov 2022', [
-    'Designed interactive website layouts and marketing assets to support digital campaigns and drive user engagement.',
-    'Developed branding visuals to maintain a consistent aesthetic and messaging across digital platforms.',
-    'Assisted in front-end development and UI improvements to create a seamless and engaging user experience.',
+    'Designed website layouts and marketing assets for digital campaigns.',
+    'Created branding visuals that kept the look and message consistent across platforms.',
+    'Helped with front-end development and UI improvements.',
   ]],
 ]
 
@@ -54,7 +54,7 @@ export const surfaceMarkup = `
   </section>
   <section id="resume-surface" class="physical-surface paper resume-paper" aria-label="Rahul's hanging resume">
     <header class="paper-toolbar">${back()}<span>Resume</span><button class="surface-icon" id="resume-download" data-action="download-resume" type="button" aria-label="Download resume PDF" title="Download resume PDF">${icon('download')}</button></header>
-    <div class="resume-scroll" tabindex="0"><button data-open="resume" class="paper-title" type="button"><h2>Rahul Bajpai</h2><p>UI/UX Designer | Product Designer</p></button><p class="resume-summary">UI/UX & Product Designer with 4.5+ years of experience designing user-centric digital products, websites, and dashboards.</p>
+    <div class="resume-scroll" tabindex="0"><button data-open="resume" class="paper-title" type="button"><h2>Rahul Bajpai</h2><p>UI/UX Designer | Product Designer</p></button><p class="resume-summary">UI/UX & Product Designer with 5 years of experience designing digital products, dashboards and websites.</p>
     <a class="resume-email" href="mailto:work.rahulbajpai@gmail.com">work.rahulbajpai@gmail.com</a><h3>Experience</h3>${resumeSections.map(([title, bullets]) => `<section><h4>${title}</h4><ul>${bullets.map(bullet => `<li>${bullet}</li>`).join('')}</ul></section>`).join('')}<h3>Skills</h3><p>${skills}</p><h3>Education</h3>${education.map(item => `<p>${item}</p>`).join('')}</div>
     <footer class="paper-footer"><button data-open="resume" type="button">Read resume ${icon('arrow-up-right')}</button><span>Design / Build / Explore</span></footer>
   </section>
@@ -130,8 +130,8 @@ export async function downloadResume() {
   document.setTextColor(46, 95, 126)
   write('UI/UX Designer | Product Designer', 12, true, 7)
   document.setTextColor(35, 35, 35)
-  write('work.rahulbajpai@gmail.com | +91 9589424837 | linkedin.com/in/rahulbajpai-uxdesigner', 9, false, 10)
-  write('Innovative UI/UX & Product Designer with 4.5+ years of experience designing user-centric digital products, websites, and dashboards. Skilled in UX strategy, wireframing, prototyping, and creating scalable, intuitive user experiences. Led the redesign of a 14-year-old flagship product, transforming it into a modern and user-focused platform. Passionate about crafting impactful digital solutions that align user needs with business goals.', 9, false, 12)
+  write('work.rahulbajpai@gmail.com | +91 9589424837 | in.linkedin.com/in/rahulbajpai-uxdesigner', 9, false, 10)
+  write('UI/UX & Product Designer with 5 years of experience across SaaS platforms, dashboards, mobile apps and websites. Led the end-to-end redesign of DesignO, a 14-year-old web-to-print editor, from audit to launch in 10 months. Works across UX strategy, flows, prototyping, UI and design systems, and writes front-end code in HTML, CSS and React.', 9, false, 12)
   write('EXPERIENCE', 10, true, 8)
   for (const [title, bullets] of resumeSections) {
     write(title, 9.1, true, 5)

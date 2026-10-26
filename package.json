@@ -9,6 +9,7 @@
     "build": "vite build",
     "build:pages": "vite build --mode pages",
     "seal": "node scripts/seal-case-studies.mjs",
+    "resume": "node scripts/build-resume.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
