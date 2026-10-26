@@ -19,6 +19,7 @@ type ScrollIntent = { anchor?: string; y?: number; immediate: boolean; focus: bo
 
 let keySeed = 0
 const createKey = () => `${Date.now().toString(36)}-${(keySeed++).toString(36)}`
+const easeInOutQuart = (t: number) => (t < 0.5 ? 8 * t ** 4 : 1 - (-2 * t + 2) ** 4 / 2)
 
 function documentTitle(route: Route) {
   return route.page === 'home' ? 'Rahul Bajpai | UI/UX & Product Designer' : `${routeTitle(route, projectNames)} | Rahul Bajpai`
@@ -52,7 +53,8 @@ export function App() {
 
   const scrollToY = useCallback((y: number, immediate: boolean) => {
     const top = Math.max(0, Math.round(y))
-    if (lenis.current) lenis.current.scrollTo(top, { immediate, force: true, duration: 1.15 })
+    // Ease in and out so jumps to anchors neither lurch off the mark nor stop dead.
+    if (lenis.current) lenis.current.scrollTo(top, { immediate, force: true, duration: 1.4, easing: easeInOutQuart })
     else window.scrollTo({ top, behavior: immediate || prefersReducedMotion() ? 'instant' : 'smooth' })
   }, [])
 
@@ -137,8 +139,10 @@ export function App() {
   }, [go])
 
   useEffect(() => {
-    if (prefersReducedMotion() || window.matchMedia('(pointer: coarse)').matches) return
-    const instance = new Lenis({ lerp: 0.11, smoothWheel: true, autoRaf: false })
+    if (prefersReducedMotion()) return
+    // Touch keeps the platform's native momentum (syncTouch is off); Lenis eases wheel, trackpad and programmatic scrolls everywhere.
+    // A low lerp blends each wheel notch into one continuous glide instead of a series of steps.
+    const instance = new Lenis({ lerp: 0.075, wheelMultiplier: 0.9, smoothWheel: true, syncTouch: false, autoRaf: false })
     lenis.current = instance
     instance.on('scroll', ScrollTrigger.update)
     const tick = (time: number) => instance.raf(time * 1000)
