@@ -14,7 +14,7 @@ const readable = document.getElementById('readable-view')
 const reduced = matchMedia('(prefers-reduced-motion: reduce)')
 const capturedFrames = new Map()
 const surfacePreviews = new Map()
-const names = { store: 'Microsoft Store', copilot: 'Copilot Sports', hello: 'Windows Hello', notebook: 'Working notebook', resume: 'Hardik / Resume', vr: 'AR / VR at PlayShifu', sky: 'The night sky' }
+const names = { store: 'BlockBolt Dashboard', copilot: 'BlockBolt App', hello: 'Blockbolt & PocketPay', notebook: 'Working notebook', resume: 'Rahul / Resume', vr: 'Linq50', sky: 'The night sky' }
 const bindings = new AbortController()
 let state = initialJourney()
 let room = null
@@ -159,7 +159,7 @@ function showReadable(page) {
   }
   document.getElementById('leave-readable-label').textContent = !room ? 'Explore desk' : ['camera', 'gallery', 'viewfinder'].includes(state.mode) ? 'Back to camera' : ['work', 'vr'].includes(state.mode) ? 'Back to monitor' : state.mode === 'desk' ? 'Back to desk' : `Back to ${state.mode}`
   document.getElementById('leave-readable').title = document.getElementById('leave-readable-label').textContent
-  document.title = `${stories[page]?.name || { work: 'Selected work', about: 'About', resume: 'Resume' }[page]} | Hardik Agarwal`
+  document.title = `${stories[page]?.name || { work: 'Selected work', about: 'About', resume: 'Resume' }[page]} | Rahul Bajpai`
   readable.scrollTop = 0
   refreshIcons()
   document.getElementById('reader-title').focus({ preventScroll: true })
@@ -175,7 +175,7 @@ function hideReadable() {
   document.body.classList.remove('readable-mode')
   stage.inert = false
   room?.setActive(true)
-  document.title = 'Hardik Agarwal | Product Designer'
+  document.title = 'Rahul Bajpai | UI/UX Designer'
   const target = readerReturnFocus?.isConnected && readerReturnFocus !== document.body ? readerReturnFocus : document.getElementById('review-work')
   target.focus({ preventScroll: true })
   startRoom()

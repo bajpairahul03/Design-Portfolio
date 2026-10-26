@@ -153,7 +153,7 @@ async function renderRoute({ focus = false } = {}) {
       body.append(narrative)
       article.classList.add('project-reader')
     }
-    document.title = `${exhibits.find(exhibit => exhibit.id === page)?.label || { work: 'Selected work', about: 'About', resume: 'Resume' }[page]} | Hardik Agarwal`
+    document.title = `${exhibits.find(exhibit => exhibit.id === page)?.label || { work: 'Selected work', about: 'About', resume: 'Resume' }[page]} | Rahul Bajpai`
     refreshIcons()
     window.scrollTo({ top: 0, behavior: 'instant' })
     if (focus) document.getElementById('reader-title').focus({ preventScroll: true })
@@ -161,7 +161,7 @@ async function renderRoute({ focus = false } = {}) {
     if (disposed || routeRevision !== revision) return
     enhanceReader(page)
   } else {
-    document.title = 'Hardik Agarwal | Product Designer'
+    document.title = 'Rahul Bajpai | UI/UX Designer'
     const target = storyTarget(location.hash)
     if (target?.dataset.project) selectProject(exhibitIndex(target.dataset.project), true)
     refreshIcons()

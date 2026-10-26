@@ -6,21 +6,21 @@ test('reading routes stay compatible with the previous portfolio', () => {
   assert.deepEqual(parseRoute('#work'), { page: 'work' })
   assert.deepEqual(parseRoute('#about'), { page: 'about' })
   assert.deepEqual(parseRoute('#resume'), { page: 'resume' })
-  assert.deepEqual(parseRoute('#work/portal'), { page: 'project', id: 'portal' })
-  assert.deepEqual(parseRoute('#work/sms-organizer'), { page: 'project', id: 'sms-organizer' })
-  assert.deepEqual(parseRoute('#work/club-seals'), { page: 'project', id: 'club-seals' })
+  assert.deepEqual(parseRoute('#work/designo'), { page: 'project', id: 'designo' })
+  assert.deepEqual(parseRoute('#work/social-media'), { page: 'project', id: 'social-media' })
+  assert.deepEqual(parseRoute('#work/linq50'), { page: 'project', id: 'linq50' })
   assert.deepEqual(parseRoute('#work/hello'), { page: 'work' })
 })
 
 test('film links open the project with its film', () => {
-  assert.deepEqual(parseRoute('#work/store/film'), { page: 'project', id: 'store', film: true })
-  assert.equal(routeKey(parseRoute('#work/store/film')), routeKey(parseRoute('#work/store')))
+  assert.deepEqual(parseRoute('#work/blockbolt-dashboard/film'), { page: 'project', id: 'blockbolt-dashboard', film: true })
+  assert.equal(routeKey(parseRoute('#work/blockbolt-dashboard/film')), routeKey(parseRoute('#work/blockbolt-dashboard')))
   assert.deepEqual(parseRoute('#work/hello/film'), { page: 'home' })
-  assert.deepEqual(parseRoute('#work/store/films'), { page: 'home' })
+  assert.deepEqual(parseRoute('#work/blockbolt-dashboard/films'), { page: 'home' })
 })
 
 test('legacy story links resolve to home anchors', () => {
-  assert.deepEqual(parseRoute('#exhibition/store'), { page: 'home', anchor: 'project-store' })
+  assert.deepEqual(parseRoute('#exhibition/blockbolt-dashboard'), { page: 'home', anchor: 'project-blockbolt-dashboard' })
   assert.deepEqual(parseRoute('#exhibition/vr'), { page: 'work' })
   assert.deepEqual(parseRoute('#my-story'), { page: 'home', anchor: 'my-story' })
   assert.deepEqual(parseRoute('#selected-work'), { page: 'home', anchor: 'selected-work' })
@@ -34,8 +34,8 @@ test('unknown or malicious hashes fall back to home', () => {
 })
 
 test('route keys and titles', () => {
-  assert.equal(routeKey({ page: 'project', id: 'store' }), 'project:store')
+  assert.equal(routeKey({ page: 'project', id: 'blockbolt-dashboard' }), 'project:blockbolt-dashboard')
   assert.equal(routeKey({ page: 'home', anchor: 'contact' }), 'home')
-  assert.equal(routeTitle({ page: 'project', id: 'store' }, { store: 'Microsoft Store' }), 'Microsoft Store')
+  assert.equal(routeTitle({ page: 'project', id: 'blockbolt-dashboard' }, { 'blockbolt-dashboard': 'BlockBolt Dashboard' }), 'BlockBolt Dashboard')
   assert.equal(routeTitle({ page: 'resume' }), 'Resume')
 })

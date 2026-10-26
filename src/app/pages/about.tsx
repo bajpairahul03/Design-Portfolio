@@ -32,7 +32,7 @@ export function AboutPage() {
           <p className="mt-10 max-w-[44ch] text-[clamp(1.2rem,1.7vw,1.6rem)] leading-snug">{about.intro}</p>
         </div>
         <figure className="about-photo overflow-hidden rounded-[20px] md:col-span-4 md:col-start-9">
-          <img src={photos.cameraPortrait} alt="Hardik with a camera strap over his shoulder" width={1269} height={1800} decoding="async" className="aspect-[4/5] w-full origin-[60%_42%] scale-[1.45] object-cover object-[60%_42%]" />
+          <img src={photos.cameraPortrait} alt="Rahul in a red jacket on a street at night" width={1164} height={1383} decoding="async" className="aspect-[4/5] w-full origin-[60%_42%] scale-[1.45] object-cover object-[60%_42%]" />
         </figure>
       </section>
 
@@ -49,7 +49,7 @@ export function AboutPage() {
         <h2 id="career-title" className="about-block display text-[clamp(2.75rem,5.4vw,5.75rem)]">Career</h2>
         <ol className="mt-12 [--career:clamp(1.6rem,2.6vw,2.6rem)] md:mt-16">
           {about.career.map((item, index) => (
-            <li key={item.company} className="about-block group grid md:grid-cols-12 md:gap-8">
+            <li key={`${item.company} ${item.dates}`} className="about-block group grid md:grid-cols-12 md:gap-8">
               <p className={cn('hidden text-[length:var(--career)] font-bold leading-[1.1] tracking-[-0.03em] tabular [font-stretch:110%] md:col-span-4 md:block', index > 0 && 'text-muted-foreground')}>{item.year}</p>
               <div className="relative pb-14 pl-9 group-last:pb-0 md:col-span-7 md:col-start-6 md:pb-20 md:pl-0">
                 <span aria-hidden="true" className="career-line absolute bottom-0 left-[5px] top-0 w-px bg-foreground/20 group-first:top-3 group-last:bottom-auto group-last:h-3 md:left-[-43px] md:group-first:top-[calc(var(--career)*0.55)] md:group-last:h-[calc(var(--career)*0.55)]" />

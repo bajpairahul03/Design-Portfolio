@@ -29,12 +29,12 @@ export function BeyondWork() {
     <section ref={root} id="beyond-work" aria-labelledby="beyond-title" className="px-5 py-[clamp(5rem,14vh,10rem)] md:px-10">
       <div className="grid gap-12 md:grid-cols-12 md:items-center md:gap-8">
         <figure className="beyond-photo overflow-hidden rounded-[20px] md:col-span-5 md:w-full md:max-w-[calc(90svh*4/5)] md:justify-self-end">
-          <img src={photos.candid} alt="Hardik smiling while seated at a restaurant table" width={1024} height={1024} loading="lazy" decoding="async" className="aspect-[4/5] w-full object-cover object-[50%_40%]" />
+          <img src={photos.candid} alt="Rahul smiling on a street at night" width={1164} height={1383} loading="lazy" decoding="async" className="aspect-[4/5] w-full object-cover object-[50%_40%]" />
         </figure>
         <div className="md:col-span-6 md:col-start-7">
           <h2 id="beyond-title" className="display text-[clamp(3rem,7vw,7.75rem)]">Still curious.</h2>
           <p className="mt-6 max-w-[34ch] text-[clamp(1.2rem,1.6vw,1.5rem)] leading-snug">
-            Not everything needs to become a project. Some things are just worth a closer look.
+            [Placeholder] A line about what keeps you curious outside work.
           </p>
           <dl className="interests mt-12 grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-2">
             {interests.map((interest) => (

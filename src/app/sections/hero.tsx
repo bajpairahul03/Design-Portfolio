@@ -14,14 +14,14 @@ function setHeaderTone(clear: boolean) {
 // The intro plays once per page load.
 let introPlayed = false
 
-// Pins and boxes are fractions of the 1122 × 1402 portrait, so each note stays on its body part at any crop.
+// Pins and boxes are fractions of the 1164 × 1106 portrait, so each note stays on its body part at any crop.
 // Order is priority: when a column runs out of room, the last notes are dropped first.
 const notes: Note[] = [
-  { id: 'head', part: 'Head', title: 'I solve it once, for good', text: 'One schema I built lets Copilot add 4 new sports a cycle.', side: 'right', pin: [0.572, 0.158], box: [0.445, 0.125, 0.6, 0.256] },
-  { id: 'eyes', part: 'Eyes', title: 'I watch before I draw', text: 'Research I led lifted satisfaction scores by 45%.', side: 'left', pin: [0.492, 0.197], box: [0.478, 0.184, 0.562, 0.211] },
-  { id: 'heart', part: 'Heart', title: 'I chase light, near and far', text: 'Photography trains my framing; astronomy, my sense of scale.', side: 'right', pin: [0.63, 0.34], box: [0.585, 0.3, 0.7, 0.4] },
-  { id: 'buttons', part: 'Buttons', title: 'I fix the papercuts', text: 'Triaging Windows Hello issues helped cut craft bugs by 20%.', side: 'right', pin: [0.561, 0.36], box: [0.548, 0.268, 0.578, 0.44] },
-  { id: 'arm', part: 'Arm', title: 'I reach past the mockup', text: 'Coded prototypes built with AI, demoed to 30+ stakeholders.', side: 'left', pin: [0.33, 0.3], box: [0.18, 0.27, 0.43, 0.345] },
+  { id: 'head', part: 'Head', title: 'I see the big picture', text: 'A designer who sees the big picture in every pixel.', side: 'right', pin: [0.53, 0.2], box: [0.408, 0.156, 0.576, 0.4] },
+  { id: 'eyes', part: 'Eyes', title: 'I research before I design', text: 'Stakeholder interviews, competitor analysis and user feedback shape each design.', side: 'left', pin: [0.5, 0.27], box: [0.46, 0.256, 0.546, 0.288] },
+  { id: 'heart', part: 'Heart', title: 'I’m from Balaghat', text: 'Originally from Balaghat, Madhya Pradesh.', side: 'right', pin: [0.62, 0.575], box: [0.56, 0.5, 0.72, 0.688] },
+  { id: 'zip', part: 'Zip', title: 'I keep it simple', text: 'I turn complex challenges into simple, intuitive designs.', side: 'right', pin: [0.455, 0.65], box: [0.44, 0.475, 0.47, 0.988] },
+  { id: 'arm', part: 'Arm', title: 'I build what I design', text: 'Responsive front-end code in HTML, CSS and React.', side: 'left', pin: [0.36, 0.688], box: [0.31, 0.5, 0.43, 0.963] },
 ]
 
 // Rides on a copy of the photo's crop, so pins share the photo's parallax and scroll scale.
@@ -39,8 +39,8 @@ function NotePins() {
   )
 }
 
-// The name sits between the photograph and a registered cutout of Hardik, so his head passes in front of it.
-// The photograph is the bench portrait with the ivy replaced by a plain wall, so the notes have a calm ground.
+// The name sits between the photograph and a registered cutout of Rahul, so his head passes in front of it.
+// The photograph is Rahul's night street portrait from his Figma portfolio.
 function HeroStage() {
   const layer = 'cover-layer absolute inset-[-2%] size-[104%] max-w-none object-cover'
   return (
@@ -49,20 +49,20 @@ function HeroStage() {
         <div className="hero-frame absolute inset-0 overflow-hidden bg-[#0b110d]">
           <div className="hero-image absolute inset-0">
             <div className="cover-photo absolute inset-0">
-              <img className={layer} data-cover="scene" src={photos.benchScene} alt="Hardik seated on a green bench" width={2244} height={2804} fetchPriority="high" decoding="async" />
+              <img className={layer} data-cover="scene" src={photos.benchScene} alt="Rahul in a red jacket on a street at night" width={1164} height={1106} fetchPriority="high" decoding="async" />
             </div>
           </div>
           <StarTrails />
           <div className="cover-type absolute inset-x-0 px-5 text-[#f4f4f1] md:px-10">
             <h1 id="home-title" className="whitespace-nowrap text-[16vw] font-[820] uppercase leading-[0.8] tracking-[-0.02em] [font-stretch:125%] md:text-center md:text-[calc((100vw-6rem)/10.45)]">
-              <span className="sr-only normal-case">Hardik Agarwal</span>
-              <span aria-hidden="true" className="hero-first block md:inline-block"><span className="hero-name-part block md:inline-block">Hardik</span></span>{' '}
-              <span aria-hidden="true" className="hero-last block md:inline-block"><span className="hero-name-part block md:inline-block">Agarwal</span></span>
+              <span className="sr-only normal-case">Rahul Bajpai</span>
+              <span aria-hidden="true" className="hero-first block md:inline-block"><span className="hero-name-part block md:inline-block">Rahul</span></span>{' '}
+              <span aria-hidden="true" className="hero-last block md:inline-block"><span className="hero-name-part block md:inline-block">Bajpai</span></span>
             </h1>
           </div>
           <div className="hero-image pointer-events-none absolute inset-0">
             <div className="cover-photo absolute inset-0">
-              <img className={layer} data-cover="subject" src={photos.subject} alt="" aria-hidden="true" width={2244} height={2804} decoding="async" />
+              <img className={layer} data-cover="subject" src={photos.subject} alt="" aria-hidden="true" width={1164} height={1106} decoding="async" />
             </div>
           </div>
           <div className="hero-scrim pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgb(10_16_11/0.4)_0%,rgb(10_16_11/0)_16%,rgb(10_16_11/0)_52%,rgb(10_16_11/0.85)_100%)]" />
@@ -74,18 +74,9 @@ function HeroStage() {
         <div className="hero-lead md:w-[26rem]">
           <div className="hero-fade">
             <p className="mb-4 text-[15px] font-semibold md:text-base">
-              Product designer at{' '}
-              <span className="whitespace-nowrap">
-                Microsoft
-                <svg aria-hidden="true" focusable="false" viewBox="0 0 21 21" className="ml-[0.4em] inline-block size-[0.75em] align-baseline">
-                  <path fill="#f25022" d="M0 0h10v10H0z" />
-                  <path fill="#7fba00" d="M11 0h10v10H11z" />
-                  <path fill="#00a4ef" d="M0 11h10v10H0z" />
-                  <path fill="#ffb900" d="M11 11h10v10H11z" />
-                </svg>
-              </span>
+              UI/UX & Product Designer at <span className="whitespace-nowrap">Design'N'Buy</span>
             </p>
-            <p className="text-lg leading-snug md:text-[1.35rem]">I design for AI, developer platforms and identity, and prototype in code.</p>
+            <p className="text-lg leading-snug md:text-[1.35rem]">A designer who sees the big picture in every pixel.</p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link to="#selected-work" className="inline-flex h-12 items-center gap-2 rounded-full bg-[#f4f4f1] px-6 text-[15px] font-semibold text-[#111315] transition-transform active:scale-[0.97]">
                 View work <ArrowDown aria-hidden="true" className="size-4" strokeWidth={2} />
@@ -108,20 +99,20 @@ function HeroStatement() {
     <div id="my-story" className="hero-statement px-5 py-[clamp(5rem,14vh,9rem)] md:px-10">
       <div className="statement-then">
         <h2 className="statement-line display max-w-[11ch] text-[clamp(2.6rem,8vw,4.75rem)] tracking-[-0.03em] lg:text-[clamp(2.25rem,3.55vw,4.5rem)]">
-          I grew up customizing Windows.
+          Complex challenges in.
         </h2>
       </div>
       <span aria-hidden="true" className="statement-spacer hidden" />
       <div className="statement-now mt-6 lg:mt-0">
         <p className="statement-line display max-w-[11ch] text-[clamp(2.6rem,8vw,4.75rem)] tracking-[-0.03em] text-primary lg:text-[clamp(2.25rem,3.55vw,4.5rem)]">
-          Now I help design it.
+          Simple, intuitive designs out.
         </p>
         <div className="statement-detail mt-8 max-w-[23rem]">
           <p className="text-[17px] leading-relaxed text-muted-foreground">
-            My path ran through communication design, then AR and VR. Today I design how developers bring their apps to Windows, which feels like coming full circle.
+            My goal is to create user experiences that are so smooth, users won’t even realize they’re using an interface—just like magic, but with less smoke.
           </p>
-          <Link to="#work/portal" className="mt-5 inline-flex items-center gap-1.5 text-[17px] font-semibold underline decoration-1 underline-offset-[6px] hover:decoration-2">
-            See the Windows Developer Center <ArrowUpRight aria-hidden="true" className="size-4" strokeWidth={2} />
+          <Link to="#work/blockbolt-dashboard" className="mt-5 inline-flex items-center gap-1.5 text-[17px] font-semibold underline decoration-1 underline-offset-[6px] hover:decoration-2">
+            See the BlockBolt case study <ArrowUpRight aria-hidden="true" className="size-4" strokeWidth={2} />
           </Link>
         </div>
       </div>

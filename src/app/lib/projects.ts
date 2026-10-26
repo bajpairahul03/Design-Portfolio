@@ -1,51 +1,40 @@
 import type { ProjectId } from './routes.js'
-import storeCover from '../../assets/work/store-cover.webp'
-import storeAccount from '../../assets/work/store-account.webp'
-import storeOcr from '../../assets/work/store-ocr.webp'
-import storeRecover from '../../assets/work/store-recover.webp'
-import portalCoverLocked from '../../assets/work/portal-cover-locked.webp'
-import copilotCover from '../../assets/work/copilot-cover.webp'
-import copilotBefore from '../../assets/work/copilot-before.webp'
-import copilotAfter from '../../assets/work/copilot-after.webp'
-import copilotF1 from '../../assets/work/copilot-f1.webp'
-import copilotTennis from '../../assets/work/copilot-tennis.webp'
-import copilotCricket from '../../assets/work/copilot-cricket.webp'
-import copilotNfl from '../../assets/work/copilot-nfl.webp'
-import copilotPre from '../../assets/work/copilot-pre.webp'
-import copilotLive from '../../assets/work/copilot-live.webp'
-import copilotPost from '../../assets/work/copilot-post.webp'
-import copilotShell from '../../assets/work/copilot-shell.webp'
-import smsCover from '../../assets/work/sms-cover.webp'
-import smsNavigation from '../../assets/work/sms-navigation.webp'
-import smsReminders from '../../assets/work/sms-reminders.webp'
-import smsLanguages from '../../assets/work/sms-languages.webp'
-import smsFinance from '../../assets/work/sms-finance.webp'
-import smsOffers from '../../assets/work/sms-offers.webp'
-import smsFirstRun from '../../assets/work/sms-first-run.webp'
-import mapCover from '../../assets/work/map-cover.webp'
-import mapDestinations from '../../assets/work/map-destinations.webp'
-import mapVerticals from '../../assets/work/map-verticals.webp'
-import mapFilters from '../../assets/work/map-filters.webp'
-import mapDestination from '../../assets/work/map-destination.webp'
-import mapAttraction from '../../assets/work/map-attraction.webp'
-import tripsCoverLocked from '../../assets/work/trips-cover-locked.webp'
-import sealsCover from '../../assets/work/club-seals-cover.webp'
-import sealsHomeToday from '../../assets/work/club-seals-home-today.webp'
-import sealsHome from '../../assets/work/club-seals-home.webp'
-import sealsHold from '../../assets/work/club-seals-hold.webp'
-import sealsCrack from '../../assets/work/club-seals-crack.webp'
-import sealsReveal from '../../assets/work/club-seals-reveal.webp'
-import sealsWeek from '../../assets/work/club-seals-week.webp'
-import sealsGolden from '../../assets/work/club-seals-golden.webp'
-import sealsCart from '../../assets/work/club-seals-cart.webp'
-import sealsNight from '../../assets/work/club-seals-night.webp'
-import sealsShelf from '../../assets/work/club-seals-shelf.webp'
-import sealsRules from '../../assets/work/club-seals-rules.webp'
+import dashboardScreen from '../../assets/work/blockbolt-dashboard.webp'
+import posScreen from '../../assets/work/blockbolt-pos.webp'
+import paylinksScreen from '../../assets/work/blockbolt-paylinks.webp'
+import universalScreen from '../../assets/work/blockbolt-universal.webp'
+import ordersScreen from '../../assets/work/blockbolt-orders.webp'
+import invoicesScreen from '../../assets/work/blockbolt-invoices.webp'
+import questScreen from '../../assets/work/blockbolt-quest.webp'
+import usecasesScreen from '../../assets/work/blockbolt-usecases.webp'
+import settingsScreen from '../../assets/work/blockbolt-settings.webp'
+import appSplash from '../../assets/work/blockbolt-app-splash.webp'
+import appPayment from '../../assets/work/blockbolt-app-payment.webp'
+import karrierPost from '../../assets/work/blockbolt-karrier-post.webp'
+import pocketpayPost from '../../assets/work/pocketpay-post.webp'
+import linq50Brand from '../../assets/work/linq50-brand.webp'
+import designoBusinessCard from '../../assets/work/designo-business-card.webp'
+import designoBoothBackdrop from '../../assets/work/designo-booth-backdrop.webp'
+import designoPhotobookPages from '../../assets/work/designo-photobook-pages.webp'
+import designoSportsTee from '../../assets/work/designo-sports-tee.webp'
+import designoTeeParts from '../../assets/work/designo-tee-parts.webp'
+import designoTshirt from '../../assets/work/designo-tshirt.webp'
+import designoMailerBox from '../../assets/work/designo-mailer-box.webp'
+import designoTuckBox from '../../assets/work/designo-tuck-box.webp'
+import designoThreeWallBooth from '../../assets/work/designo-three-wall-booth.webp'
+import designoTextPanel from '../../assets/work/designo-text-panel.webp'
+import designoQrCodes from '../../assets/work/designo-qr-codes.webp'
+import designoLayers from '../../assets/work/designo-layers.webp'
+import designoMobileTshirt from '../../assets/work/designo-mobile-tshirt.webp'
+import designoMobileBoxPreview from '../../assets/work/designo-mobile-box-preview.webp'
+import designoMobileBooth from '../../assets/work/designo-mobile-booth.webp'
+// [Placeholder] Grayscale copies of the new editor stand in for the previous studio until its real screens arrive.
+import designoBeforeBusinessCard from '../../assets/work/designo-before-placeholder-business-card.webp'
 
 export type Metric = { value: string; label: string }
 export type Shot = { src: string; alt: string; width: number; height: number; caption?: string }
 export type Quote = { text: string; source: string }
-// Words from colleagues' Microsoft feedback; an ellipsis marks each cut. `highlight` is quoted verbatim from `text`.
+// Words from colleagues and clients; an ellipsis marks each cut. `highlight` is quoted verbatim from `text`.
 export type Endorsement = { text: string; role: string; highlight?: string }
 export type Flow = { label: string; steps: string[] }
 // Rendered by the Remotion project in video/ into public/films.
@@ -56,7 +45,8 @@ export type CaseStudy = {
   problem: { body: string; stats?: Metric[]; quote?: Quote }
   insight: string
   contrast?: { title: string; items: string[]; keep: boolean }[]
-  decisions: { title: string; body: string; shots: Shot[]; flows?: Flow[]; compare?: true }[]
+  // `basis` says where a decision's evidence comes from, such as the designer's confirmed role or the live product.
+  decisions: { title: string; body: string; shots: Shot[]; flows?: Flow[]; compare?: true; basis?: string }[]
   result: { title?: string; body: string; metrics?: Metric[]; note?: string; quote?: Quote; changes?: [string, string][]; shots?: Shot[] }
   takeaway: { line: string; body?: string }
   partners?: Endorsement[]
@@ -91,429 +81,318 @@ type Teaser = {
 // Locked case studies live encrypted in src/protected/<id> and open with a password.
 export type Project = Teaser & ((CaseStudy & { locked?: never }) | { locked: true })
 
-// Screens come from Hardik's Figma case studies and, for earlier work, his previous portfolio. Figures are the ones those sources and his resume report.
-// Club Seals is a design challenge: its screens come from its prototype and its figures describe the work, not results.
+// Copy and screens come from Rahul's Figma portfolio (rb-portfolio). Figures are counts of what those designs show, not results.
+// DesignO screens are captures of the live DesignO editor demos; its figures are Design'N'Buy's published ones.
+// Values marked [Placeholder] have no source in the Figma file yet and need Rahul's own content.
 export const projects: Project[] = [
   {
-    id: 'store',
-    name: 'Microsoft Store',
-    category: 'Developer onboarding',
-    headline: 'A shorter path to the Store.',
-    description: 'I rebuilt company onboarding for Microsoft Store developers. Verification stayed strict; the guesswork around it went away.',
-    summary: 'I rebuilt company onboarding around clarity and recovery, without lowering the trust bar.',
-    role: 'Product designer',
-    organization: 'Microsoft',
-    timeline: '2025 to 2026',
-    team: '8 partner teams across product, engineering, verification, accounts, legal, support and marketing',
-    scope: 'Onboarding, verification, recovery and appeals, implementation review',
+    id: 'designo',
+    name: 'DesignO',
+    category: 'Product redesign · Web-to-print',
+    headline: 'One editor for everything a print shop sells.',
+    description: "My director asked me to redesign DesignO, Design'N'Buy's 14-year-old flagship product designer. I designed the complete revamp, UX and UI, in 10 months, and it launched in March 2026 as one modern editor for merchandise, printing, packaging and photo books.",
+    summary: "I designed the complete revamp of a 14-year-old web-to-print editor in 10 months, from research and flows to the final UI and design system.",
+    role: 'Lead UI/UX & Product Designer',
+    organization: "Design'N'Buy",
+    timeline: 'May 2025 to March 2026',
+    status: 'Launched March 2026',
+    team: "Brief from Design'N'Buy's director; built with developers and stakeholders",
+    scope: 'End to end: audit, UX strategy, user flows, wireframes, prototypes, UI in Figma, design system, responsive and mobile design, implementation review',
     metrics: [
-      { value: '35% to 73%', label: 'Onboarding success' },
-      { value: '~15 days to ~1 day', label: 'Average vetting time' },
+      { value: '10 months', label: 'From brief to launch, a complete revamp' },
+      { value: '14 years', label: 'Of product, rebuilt as a modern platform' },
     ],
     problem: {
-      body: 'Microsoft Store reaches more than 250 million Windows customers a month, and every company that publishes there must pass business verification. Companies paid a $99 fee before they knew whether they could pass it. Requirements surfaced late, progress was invisible and failures arrived without a reason. Around 230 companies a month were affected, including well-known, legitimate organizations, and escalations reached executive channels.',
+      body: "DesignO is Design'N'Buy's product personalization platform. A print shop connects it to its online store; shoppers design a product in the browser, check it in 2D and 3D, see the price as they go, and the shop receives a print-ready file. Over 14 years it grew to cover business cards, banners, booths, apparel, boxes and photo books, and my director asked me to rethink the whole experience. I started from three working hypotheses: each product type had grown its own way of doing the same task; print rules such as bleed, sizes and dielines reached shoppers in production language; and options, design and price sat apart, so a shopper couldn't see what a choice changed while designing.",
       stats: [
-        { value: '35%', label: 'Of companies finished onboarding, against 90% of individuals' },
-        { value: '1 in 3', label: 'Stopped at the $99 payment step' },
-        { value: '~41%', label: 'Failed during vetting' },
-        { value: '85%', label: 'Of failures came from domain and email checks' },
+        { value: '2,000+', label: "Print businesses using Design'N'Buy, as the company reports" },
+        { value: '1,000+', label: 'Packaging models with dielines and live 3D, as the company reports' },
+        { value: '4', label: 'Ready store integrations: Shopify, WooCommerce, Magento and BigCommerce' },
       ],
     },
-    insight: "Verification was necessary. The uncertainty around it wasn't.",
+    insight: 'Print shops sell very different products, but their customers do the same four things: choose, design, check and buy.',
     contrast: [
-      { title: 'Kept: the checks that protect trust', items: ['Identity', 'Business verification', 'Domain verification', 'Due diligence', 'Legal information'], keep: true },
-      { title: 'Removed: the friction that only added uncertainty', items: ['Hidden requirements', 'Late validation', 'Opaque progress', 'Unclear failures', 'Dead ends', 'Repeated work'], keep: false },
+      { title: 'Carried forward: what 14 years of product had to keep doing', items: ['Live pricing from product options', 'Print-ready output with bleed and safe areas', 'Dielines and 3D for packaging', 'Multi-page and multi-panel products', 'Names and numbers in bulk'], keep: true },
+      { title: 'Made consistent: what every product now shares', items: ['One tool rail and options panel', 'One canvas with the same print guides', 'One 2D and 3D preview', 'One price, always visible'], keep: true },
     ],
     decisions: [
       {
-        title: 'Own the experience, then remove the commitment barrier',
-        body: "We moved onboarding into a Store-owned flow built on the verification services, so the Store controlled guidance, status and recovery. That unlocked the rest: dropping the $99 fee, signing in with a company's Microsoft Entra identity, and a preparation step that explains what verification needs before anyone commits.",
-        shots: [{ src: storeAccount, alt: 'Choose account type step of the redesigned onboarding, with individual and company developer options, both marked free', width: 1600, height: 801 }],
-      },
-      {
-        title: 'Let companies prove who they are with what they have',
-        body: 'I replaced one rigid path with three ways to verify: a D-U-N-S number, a lookup by company name and country, or an official business document. AI reads the document and pre-fills the company details for review, while human verification stays in the loop.',
-        shots: [{ src: storeOcr, alt: 'Business details step with an uploaded business document and the company details pre-filled from it, ready to review', width: 1600, height: 884 }],
-      },
-      {
-        title: 'Make failure a step, not an ending',
-        body: 'Most failures came from domain and email checks, so I brought that check into onboarding: the flow explains which email qualifies and verifies it before anything is submitted. Verification status updates in real time, with a clear reason whenever action is needed. When a check still fails, companies fix it inside the flow and pick up where they left off, and reminders on days 2, 5 and 7 replace the old silence.',
-        flows: [
-          { label: 'Before: linear and opaque', steps: ['Choose account', 'Sign in with a personal account', 'Fill in details', 'Pay $99', 'Submit', 'Wait', 'Fail?', 'No reason given'] },
-          { label: 'After: structured and recoverable', steps: ['Choose account', 'Sign in', 'Business details', 'Contact', 'Submit', 'Verify', 'Resolve or complete'] },
-        ],
-        shots: [{ src: storeRecover, alt: 'Account verification step explaining that business verification did not succeed, with an Upload document action beside it', width: 1600, height: 884 }],
-      },
-    ],
-    result: {
-      body: 'The redesign launched as a pilot in 50 countries, then rolled out to every Microsoft Store market. Onboarding success nearly doubled and the wait for vetting fell from about 15 days to 1, while vetting success held above 80%.',
-      metrics: [
-        { value: '35% to 73%', label: 'Onboarding success' },
-        { value: '~15 days to ~1 day', label: 'Average vetting time' },
-        { value: '240+', label: 'Companies onboarded in the pilot' },
-        { value: '80%+', label: 'Vetting success held' },
-      ],
-      note: 'Internal post-launch figures.',
-      quote: { text: 'I have created developer accounts before, but with the new onboarding flow everything is so much smoother. From start to finish it took me less than 30 minutes to have a fully vetted business account, ready to go. Removing the onboarding fee is just the cherry on top of the cake.', source: 'Blue Banana Software, Microsoft Store company developer' },
-    },
-    takeaway: {
-      line: "The best onboarding doesn't remove complexity from the system. It absorbs it, so the user doesn't have to.",
-      body: 'Along the way I surfaced 400 craft and implementation issues in review, then prototyped Craft Check, a tool that compares the Figma design with the build, to catch them earlier.',
-    },
-    partners: [
-      { text: 'On Company Account Onboarding, the UX requirements were complex (Reverse D-U-N-S search, country-specific fields, verification failure paths, document upload, retry flows), and you consistently delivered clear, high-bar Figma prototypes with a fast turnaround. You didn’t make the team wait on design.', highlight: 'You didn’t make the team wait on design.', role: 'Senior product manager' },
-      { text: 'Beyond design, your attention to detail and diligence in ensuring engineering implemented the experience as intended were equally impressive. You also showed strong conviction in holding your ground through tough tradeoff discussions, which helped maintain the integrity of the experience.', highlight: 'holding your ground through tough tradeoff discussions', role: 'Principal PM manager' },
-    ],
-    film: { src: './films/store.mp4', poster: './films/store-poster.jpg', captions: './films/store.vtt', duration: '1:52' },
-    color: '#b52845',
-    ink: '#f0e7e6',
-    cover: { src: storeCover, alt: 'Redesigned Microsoft Store developer onboarding showing live status for email, business and employment verification', width: 1600, height: 884 },
-  },
-  {
-    id: 'portal',
-    name: 'Windows Developer Center',
-    category: 'Developer platform',
-    headline: 'Publishing, the way developers think about it.',
-    description: 'I shaped the new Windows Developer Center, from where it should live to how an app goes from package to published.',
-    summary: 'I redesigned app publishing around how developers think, and tested it with a coded prototype and developer research.',
-    role: 'Product designer',
-    organization: 'Microsoft',
-    timeline: 'July 2026',
-    status: 'Design complete, not yet built',
-    team: 'Product, engineering, research and Store leadership',
-    scope: 'Vision and information architecture, MSIX, Win32 and web app publishing, research, Fluent design and coded prototypes',
-    metrics: [
-      { value: '6,000+', label: 'Developers use the portal each month' },
-      { value: '1,250+', label: 'New apps submitted each month' },
-      { value: '5,500+', label: 'App updates each month' },
-    ],
-    locked: true,
-    color: '#d0e266',
-    ink: '#101714',
-    cover: { src: portalCoverLocked, alt: 'Blurred preview of the Windows Developer Center with a lock, protected under NDA', width: 1600, height: 1000 },
-  },
-  {
-    id: 'copilot',
-    name: 'Copilot Sports',
-    category: 'AI answers and design systems',
-    headline: 'The answer became the interface.',
-    description: 'Copilot answered sports questions in paragraphs. I designed the instant answer: visual cards that read like the game itself, on one system across four sports.',
-    summary: "I turned Copilot's text answers into visual sports cards, built on one reusable schema.",
-    role: 'Product designer',
-    organization: 'Microsoft',
-    timeline: 'March to May 2025',
-    team: 'Engineering, plus a designer who owned deeper exploration',
-    scope: 'Instant answer cards, design system, every match state, light and dark, desktop and mobile',
-    metrics: [
-      { value: '4', label: 'New sports per cycle on one schema' },
-      { value: '1 system', label: "Carried through Copilot's 2026 redesign" },
-    ],
-    problem: {
-      body: 'Sports fans are high-intent and real time: they want the answer now, and more of them were asking AI for it. Copilot already had the scores, teams and match state, but the answer was still mostly text.',
-      stats: [
-        { value: '4×', label: 'Growth in sports search interest, 2019 to 2023' },
-        { value: '50%', label: 'Of sports searches happen live' },
-        { value: '52%', label: 'Of fans used generative AI in 2025, up from 31%' },
-      ],
-    },
-    insight: "The data was there. The interface wasn't.",
-    decisions: [
-      {
-        title: 'Answer first, explore when you want more',
-        body: 'I turned the structure already in the sports data into a visual hierarchy, so the card resolves the question at a glance and deeper content waits for fans who want it. I owned that instant layer; another designer owned the exploration below it.',
+        basis: 'Placeholder before image',
+        title: 'From a studio that grew for 14 years to one designed as a whole',
+        body: "The previous studio had collected 14 years of features. I audited it product by product, mapped every option and tool, and rebuilt the experience around the shopper's task instead of the feature list. Drag the handle to compare.",
         compare: true,
         shots: [
-          { src: copilotBefore, alt: 'Copilot answering a question about the next India versus New Zealand match with a text list', width: 880, height: 588, caption: 'Before: a text answer' },
-          { src: copilotAfter, alt: 'Copilot answering a question about the next India T20 match with a visual match card and upcoming fixtures', width: 880, height: 588, caption: 'After: the answer is the card' },
+          { src: designoBeforeBusinessCard, alt: 'Placeholder for the previous DesignO studio: a grayscale copy of the new editor', width: 1568, height: 726, caption: 'Before: placeholder, to be replaced with the previous studio' },
+          { src: designoBusinessCard, alt: 'The redesigned DesignO editor with a business card, options, print guides and live price', width: 1568, height: 726, caption: 'After: the redesigned editor' },
         ],
       },
       {
-        title: "One reading model, each sport's own logic",
-        body: 'Cricket has overs and run rates, tennis has sets and tiebreaks, F1 has laps and pit windows, and the NFL has downs. A shared layer controls how a card reads (type, spacing, hierarchy, surfaces and states); a sport layer controls what matters. Two card structures carry every sport: a Hero card spotlights one game before, during or after it, and a Table card lists several games for league and team questions. Adding a sport became data mapping, not a redesign.',
+        basis: 'Shipped',
+        title: 'One editor shell for every product',
+        body: 'Every product opens in the same frame: tools on a left rail, the product and its options beside them, the canvas in the middle, a live preview on the right, and Save, Share, Download and the price across the top. A shopper who has designed a business card already knows where everything is on a box or a T-shirt, and the team builds one frame instead of one per product. I designed this shell, and everything inside it, from the first flows and wireframes to prototypes and the final UI in Figma.',
+        shots: [{ src: designoBusinessCard, alt: 'DesignO editor with a business card on the canvas: tool rail, product options for size, paper type, corner radius and delivery, safe, cut and bleed guides, and a live price of ₹62.5 in the top bar', width: 1568, height: 726, caption: 'Printing: a business card in the shared editor shell' }],
+      },
+      {
+        basis: 'Shipped',
+        title: 'Options, design and price in one view',
+        body: 'Product options live in the Info panel next to the canvas, with required choices marked, and the price on the cart button updates as they change. Apparel shows the maths openly: a size-and-quantity grid, the average print price and the artwork setup price. The hypothesis was that shoppers abandon custom orders when price arrives as a surprise at checkout, so cost stays visible during every decision.',
         flows: [
-          { label: 'Before the system', steps: ['New sport', 'New design', 'New component decisions', 'New implementation'] },
-          { label: 'With the system', steps: ['New sport', 'Existing schema', 'Sport-specific mapping', 'Implementation'] },
+          { label: 'The shopper journey in the redesigned editor', steps: ['Choose options', 'Design', 'Check in 2D and 3D', 'See the price update', 'Save, share or add to cart'] },
         ],
+        shots: [{ src: designoTshirt, alt: 'DesignO editor with a T-shirt: colour swatches, printing method, a size and quantity grid with per-size prices, average print price and artwork setup price, and Front, Back, Left and Right views', width: 1568, height: 726, caption: 'Merchandise: colours, printing method and size-by-size pricing beside the design' }],
+      },
+      {
+        basis: 'Shipped',
+        title: 'Make print rules visible, not technical',
+        body: 'Safe, cut and bleed appear as coloured guides on the canvas with a small legend, and the product size sits under it, so shoppers keep text inside the safe area without learning print terms. The 3D preview closes the gap between a flat file and the real object: here a backdrop bends the way it will on the stand.',
+        shots: [{ src: designoBoothBackdrop, alt: 'DesignO editor with a booth backdrop: safe, cut and bleed guides on the flat artwork and a 3D preview of the curved backdrop', width: 1568, height: 726, caption: 'Large format: print guides on the canvas, the curved backdrop in 3D' }],
+      },
+      {
+        basis: 'Shipped',
+        title: 'Let each product add only what it needs',
+        body: 'The shell stays fixed; product-specific tools appear only where they matter. Apparel adds Front, Back, Left and Right views, Name & Number (typed in or uploaded as a CSV) and Parts, where each panel of a sports shirt gets its own colour or material. Packaging works on the dieline with Outside and Inside sides and a live 3D box. Photo books add a Pages panel of named spreads, and a 3-wall booth pages through its walls with Duplicate Page. New product types become configuration rather than a new interface.',
         shots: [
-          { src: copilotF1, alt: 'Live F1 card for the Emilia Romagna Grand Prix with lap count and the top three drivers', width: 960, height: 666, caption: 'F1' },
-          { src: copilotTennis, alt: 'Tennis card for the Indian Wells Open with live set scores', width: 960, height: 666, caption: 'Tennis' },
-          { src: copilotCricket, alt: 'Live cricket card for India versus New Zealand with scores, overs and the run chase', width: 960, height: 666, caption: 'Cricket' },
-          { src: copilotNfl, alt: 'NFL card for Giants versus Commanders with kickoff time and win probability', width: 763, height: 529, caption: 'NFL' },
+          { src: designoTeeParts, alt: 'DesignO Parts panel for a sports T-shirt: main body, sleeves, collar and sleeve ends, each with colour and material swatches', width: 1486, height: 726, caption: 'Merchandise: parts and materials' },
+          { src: designoMailerBox, alt: 'DesignO editor with a custom mailer box dieline, material and finish options, Outside and Inside sides, and a live 3D preview of the open box', width: 1568, height: 726, caption: 'Packaging: dieline and live 3D' },
+          { src: designoPhotobookPages, alt: 'DesignO photo book with the cover on the canvas and a Pages panel listing the front cover and each two-page spread', width: 1488, height: 726, caption: 'Photo books: pages as spreads' },
+          { src: designoThreeWallBooth, alt: 'DesignO editor with a 3-wall enclosed booth: page 1 of 3 on the canvas, Duplicate Page, and a 3D preview of the walls', width: 1568, height: 726, caption: 'Large format: one booth, three walls' },
         ],
       },
       {
-        title: 'Design every state, not just the final score',
-        body: 'Cards cover pre-game, live and post-game, plus the edge cases that break layouts: rain delays, red flags, super overs, 40-character names and dense stats. Every state works in light and dark, on desktop and mobile, with component specs engineers could build without reinterpreting. Before launch I reviewed the build against those specs for typography, spacing, score hierarchy, icons and dark mode.',
+        basis: 'Shipped',
+        title: 'Tools grouped by what shoppers make',
+        body: 'The rail is organized around content, not software: Text, Art, Photos, Codes, Designs, Background and Templates. Text starts from roles such as Heading, Sub Heading, Body and Curve rather than font settings, with AI help at the top. Codes turns a website, phone number or map location into a QR code. Layers gives finer control to those who want it, with edit, arrange, hide and lock on every element, while staying out of the way for everyone else.',
         shots: [
-          { src: copilotPre, alt: "Pre-game cricket card with the start time and each team's recent form", width: 900, height: 485, caption: 'Pre-game' },
-          { src: copilotLive, alt: 'Live cricket card with both scores and the runs still needed', width: 900, height: 583, caption: 'Live' },
-          { src: copilotPost, alt: 'Post-game cricket card with the result, player of the match and video highlights', width: 900, height: 552, caption: 'Post-game' },
+          { src: designoTextPanel, alt: 'DesignO Text panel with an AI option and text styles for heading, sub heading, body, paragraph, circular and curved text', width: 1486, height: 726, caption: 'Text by role, with AI' },
+          { src: designoQrCodes, alt: 'DesignO QR Code Generator with sources such as website URL, social media, YouTube video, phone number, email and Google Maps location', width: 1486, height: 726, caption: 'QR codes from what shoppers have' },
+          { src: designoLayers, alt: 'DesignO Layers panel listing the business card elements with edit, arrange, visibility, lock and move controls', width: 1488, height: 726, caption: 'Layers for finer control' },
         ],
+      },
+      {
+        basis: 'Shipped',
+        title: 'Designed for the phone, not shrunk to it',
+        body: 'On a phone the canvas gets the screen. The tool rail becomes a bottom tab bar (Info, Text, Art and Photos, with more behind it), Settings, Preview and Layers sit as round buttons just above it, and the top bar keeps only icons, with the cart always one tap away. The 3D preview opens as its own sheet instead of fighting the canvas for space, while the print guides, product views and page navigation stay exactly where shoppers expect them.',
+        shots: [
+          { src: designoMobileTshirt, alt: 'DesignO on a phone: a T-shirt on the canvas with Front, Back, Left and Right views, round Settings, Preview and Layers buttons, and a bottom tab bar with Info, Text, Art and Photos', width: 390, height: 844, caption: 'Merchandise: views and tools within thumb reach' },
+          { src: designoMobileBoxPreview, alt: 'DesignO on a phone: the live 3D preview of an open mailer box shown as a full sheet', width: 387, height: 842, caption: 'Packaging: the 3D preview as its own sheet' },
+          { src: designoMobileBooth, alt: 'DesignO on a phone: a 3-wall booth with safe, cut and bleed guides, page 1 of 3 navigation and the product size', width: 389, height: 842, caption: 'Large format: guides and pages kept on mobile' },
+        ],
+      },
+      {
+        basis: 'Shipped',
+        title: 'A design system that scales across products and screens',
+        body: "Every product reuses the same parts: the icon rail, options fields with required markers, segmented controls such as Outside and Inside or 2D and 3D, the zoom control and the preview pane. That keeps a growing catalogue consistent and makes new product types cheaper to build. I built the design system behind it and designed the responsive layouts, so the same components carry from desktop to tablet to phone.",
+        shots: [{ src: designoTuckBox, alt: 'DesignO editor with a straight tuck box dieline using the same tool rail, options fields, Outside and Inside control and live 3D preview as the other products', width: 1568, height: 726, caption: 'The same components on a different product: a straight tuck box' }],
+      },
+      {
+        basis: 'How I worked',
+        title: 'Designing with engineering, not handing over to it',
+        body: "Modernizing a 14-year-old product meant keeping everything businesses relied on while changing how it felt. I took the brief from my director, shaped the product strategy with stakeholders, and worked with developers through implementation, reviewing builds against the Figma designs so the revamp stayed consistent across every product type until launch in March 2026.",
+        shots: [],
       },
     ],
     result: {
-      body: "The instant answer system shipped across four sports and became the foundation others built Copilot's broader sports experience on. When Copilot introduced a new design language in September 2026, the same system carried straight into the new shell.",
-      changes: [
-        ['Plain-text answers', 'Visual answers'],
-        ['One-off sport designs', 'A shared sports schema'],
-        ['Answer as content', 'Answer as interface'],
-        ['General UI language', 'Sports-specific design language'],
-      ],
-      shots: [{ src: copilotShell, alt: "Copilot's 2026 redesign answering a question about India's upcoming matches with the same sports card system", width: 1134, height: 974, caption: "The same system inside Copilot's 2026 redesign" }],
-    },
-    takeaway: { line: 'Consistency across surfaces is a system property, not a per-card decision.' },
-    film: { src: './films/copilot.mp4', poster: './films/copilot-poster.jpg', captions: './films/copilot.vtt', duration: '1:42' },
-    color: '#2d5bcc',
-    ink: '#e2e9f5',
-    cover: { src: copilotCover, alt: 'Copilot answering "Next India T20 match" with a match card for India versus New Zealand and a carousel of upcoming fixtures', width: 1400, height: 1447 },
-  },
-  {
-    id: 'sms-organizer',
-    name: 'SMS Organizer',
-    category: 'Android app redesign',
-    headline: 'The inbox that speaks your language.',
-    description: "I redesigned SMS Organizer, Microsoft's messaging app for India, from audit to delivery: one clear navigation, reminders you can act on, and messages you can translate or hear read aloud.",
-    summary: "I redesigned Microsoft's SMS app for India around clarity, smarter reminders and messages in your own language.",
-    role: 'Product designer',
-    organization: 'Microsoft x Tech Mahindra',
-    timeline: 'April to October 2023',
-    team: 'A senior designer who oversaw the work, 1 product manager and 4+ engineers',
-    scope: 'Research, competitive analysis, app audit, Material 3 design system, usability testing and delivery',
-    metrics: [
-      { value: '30%', label: 'Lift in user engagement' },
-      { value: '5+', label: 'Languages, translated or read aloud' },
-    ],
-    problem: {
-      body: "SMS Organizer sorts an Indian inbox on the phone itself, from one-time passwords and bills to bookings and offers, without uploading a thing. People loved what it did. They didn't love using it: reviews kept asking for a modern, easier app, and my audit showed why. Two navigation bars competed for attention, text was small and low in contrast, reminders stopped at the alert, and messages arrived in languages some readers couldn't read.",
-      stats: [
-        { value: '1M+', label: 'Downloads, with every message sorted on the device' },
-        { value: '2', label: 'Navigation bars competing on one screen' },
-        { value: '20+', label: 'Languages spoken across India' },
-      ],
-      quote: { text: 'Never seen such an advanced messaging app… Just an attractive GUI lacks, especially because this app is by Microsoft.', source: 'Google Play review, March 2023' },
-    },
-    insight: "The app was smart. The interface didn't show it.",
-    contrast: [
-      { title: 'Kept: what people already loved', items: ['Sorting on the device, nothing uploaded', 'OTP copying', 'Bills and accounts tracked', 'Offers in one place', 'Backup and restore'], keep: true },
-      { title: 'Removed: what got in the way', items: ['Two competing navigation bars', 'Small, low-contrast text', 'Reminders that stopped at the alert', "Messages people couldn't read", 'Taps with no feedback', 'A dated look'], keep: false },
-    ],
-    decisions: [
-      {
-        title: 'One navigation, within thumb reach',
-        body: "Two navigation bars made every screen harder to parse. I moved primary navigation to the bottom, where it's familiar and easy to reach, turned the top bar into clearly secondary message filters and named the current page in bold. More space, a clearer type hierarchy, larger text options and stronger contrast took out the rest of the noise. Moving the bar overnight would have broken habits, so the update asks people before swapping it.",
-        shots: [{ src: smsNavigation, alt: 'Before and after of the SMS Organizer inbox, annotated: the old app with two navigation bars at the top, and the new one with message filters at the top and the main navigation at the bottom', width: 1600, height: 784 }],
-      },
-      {
-        title: 'Reminders that help you act',
-        body: "Reminders sat in one flat list and stopped at the alert. I redesigned them around the next step: the app creates them from booking messages for flights, trains, hotels, movies and doctor's appointments, groups them by type and shows the details that matter. Tapping one opens a sheet with relevant information from Bing, like hotels at your destination, so the next step is right there.",
-        shots: [{ src: smsReminders, alt: 'Reminders before and after, annotated: a plain list in the old app, and grouped reminder cards in the new one, with a flight reminder open in a sheet that suggests hotels and car rentals', width: 1600, height: 1105 }],
-      },
-      {
-        title: 'Every message in a language you know',
-        body: "An SMS arrives in whichever language the sender chose, and that isn't always one the reader can read. I built language into the core of the app: people pick theirs once, translate any message into it or hear it read aloud, which matters for people who understand a language better than they read it. Every layout was designed to hold when a translation runs long.",
-        shots: [{ src: smsLanguages, alt: 'Multilingual features, annotated: choosing a preferred language from English, Gujarati, Hindi, Marathi, Tamil and Telugu, and a conversation showing a message, its translation and a read-aloud option', width: 1600, height: 774 }],
-      },
-    ],
-    result: {
-      body: 'In UX Labs testing, people preferred the new design to the old one for its layout and modern look. It shipped on a Material 3 design system I built, with a brighter blue chosen through analogous color theory, themes to choose from, micro-animations that answer taps, swipes and filters, and designed empty, error and first-run states.',
+      title: 'Outcome',
+      body: "The revamped DesignO launched in March 2026, ten months after the brief, and clients have welcomed it. The same editor now runs merchandise, printing, packaging and photo book products, with shared tools and print guides, product-specific panels where they are needed, a 2D and 3D preview and a live price.",
+      // [Placeholder] Replace with the real post-launch figures before publishing.
       metrics: [
-        { value: '30%', label: 'Lift in user engagement' },
-        { value: '5+', label: 'Languages, translated or read aloud' },
-        { value: '8+', label: 'Themes to make it yours' },
-        { value: '4.5:1', label: 'Minimum text contrast' },
+        { value: '[X]%', label: '[Placeholder] Growth since the March 2026 launch' },
+        { value: '[X]%', label: '[Placeholder] Second result, for example orders or conversion' },
+        { value: '[X]', label: '[Placeholder] Clients live on the new editor' },
       ],
-      shots: [
-        { src: smsFinance, alt: 'Finance screen listing bank accounts and credit cards with balances read from SMS', width: 900, height: 1895, caption: 'Finance' },
-        { src: smsOffers, alt: 'Offers screen with cashback offers grouped by category', width: 900, height: 1895, caption: 'Offers' },
-        { src: smsFirstRun, alt: 'First-run screen introducing message translation', width: 900, height: 1873, caption: 'First run' },
-      ],
+      changes: [['A 14-year-old flagship product', 'A modern, scalable platform']],
+      note: 'Placeholder figures: real post-launch numbers to follow.',
     },
     takeaway: {
-      line: 'Redesigning an app people already use is a migration as much as a launch.',
-      body: 'The screens were half the work. The other half was a system that could take a longer translation on any screen, and a phased rollout that let existing users move at their own pace.',
+      line: 'A platform scales when a new product is configuration, not a new interface.',
+      body: "The hardest part of redesigning a long-lived product is deciding what must stay the same. Owning it end to end, from the audit to the last review before launch, meant every decision could be traced back to the shopper's four steps: choose, design, check and buy.",
     },
-    film: { src: './films/sms-organizer.mp4', poster: './films/sms-organizer-poster.jpg', captions: './films/sms-organizer.vtt', duration: '1:50' },
-    earlier: true,
-    color: '#4466ff',
-    ink: '#ffffff',
-    cover: { src: smsCover, alt: "Redesigned SMS Organizer Reminders screen with an Amazon order, a doctor's appointment and two bills, above the new bottom navigation", width: 900, height: 1895 },
+    color: '#5b54e0',
+    ink: '#f5f4ff',
+    cover: { src: designoSportsTee, alt: 'DesignO editor with a sports T-shirt: printing method, size and quantity pricing, Front, Back, Left and Right views, and a 3D preview of the layered design', width: 1568, height: 726 },
   },
   {
-    id: 'travel-map',
-    name: 'Bing Travel Map',
-    category: 'Travel discovery',
-    headline: 'The whole trip, on one map.',
-    description: "I took Bing Travel's map from concept to MVP: one interactive map for destinations, hotels, attractions and transit, so planning a trip no longer means switching apps.",
-    summary: 'I brought destinations, hotels, attractions and transit onto one map for Bing Travel.',
-    role: 'Product designer',
-    organization: 'Microsoft x Tech Mahindra',
-    timeline: 'November 2023 to January 2024',
-    team: '1 product manager and 3+ engineers',
-    scope: 'Concept, interaction design, usability testing and delivery of key modules',
+    id: 'blockbolt-dashboard',
+    name: 'BlockBolt Dashboard',
+    category: 'Dashboard design',
+    headline: 'End-to-end UI/UX design for a secure blockchain-powered platform.',
+    description: 'The BlockBolt Merchant Dashboard is a user-friendly platform designed for merchants to manage transactions, track analytics, and streamline operations.',
+    summary: 'I designed the BlockBolt merchant dashboard end to end, from research to a sleek, responsive interface.',
+    role: 'Solo UI/UX designer',
+    organization: 'BlockBolt',
+    timeline: 'March 2024 to now',
+    team: 'Solo UI/UX designer, leading the entire design process with business owners and project managers',
+    scope: 'Research, user persona, user flows, information architecture, typography, colours and layouts',
     metrics: [
-      { value: '5', label: 'Travel verticals on one map' },
-      { value: '68%', label: 'Map click rate in UX Labs studies' },
+      { value: '9', label: 'Merchant modules designed' },
+      { value: '3', label: 'Chains in orders: ICP, Solana and SUI' },
     ],
     problem: {
-      body: 'Travelers plan on maps. They check whether a hotel is close to what they want to see, and whether a day is even feasible. On Bing, planning a trip meant switching between apps and sites for hotels, flights, activities and transit, with no way to narrow the map to what mattered and little help deciding where to go in the first place.',
-      stats: [{ value: '68%', label: 'Click rate on maps across UX Labs studies' }],
-      quote: { text: 'I just look at the location of every place on the map to check that I do not take something which is very far, because feasibility is important.', source: 'Research participant, Bing Travel' },
+      body: 'BlockBolt is a decentralized payment system that makes crypto transactions easy, fast, and secure. It offers tools for businesses to accept payments online and in stores, a secure wallet for users, and features like automated recurring payments. But many businesses face challenges integrating cryptocurrency payments due to complex processes and lack of easy-to-use tools, consumers struggle to find secure, reliable, and user-friendly platforms, and both are wary of the security risks involved in handling digital currencies.',
+      quote: { text: 'I want to accept crypto payments, but it seems complicated and unclear.', source: 'Sarah Thompson, user persona: a small business owner, 32, moderately tech-savvy' },
     },
-    insight: "Travelers don't plan in lists. They plan in places.",
-    decisions: [
-      {
-        title: 'Help people decide where to go',
-        body: "Many travelers start without a destination, so the map starts there too. It groups places by continent with the top picks from each, offers trips nearby and prices them from where you're browsing. Themes like beaches, relaxation and adventure narrow the field, and each destination shows when to visit, the weather, average flight and hotel costs, and the currency and visa details people check before they commit.",
-        shots: [{ src: mapDestinations, alt: 'Exploring destinations, annotated: a panel of nearby, North American and Asian destinations with the browsing location and search, beside a map that groups destinations by continent', width: 1600, height: 897 }],
-      },
-      {
-        title: 'Every vertical on one map',
-        body: "I brought every travel vertical onto one surface. One search covers destinations, hotels, attractions and countries, each destination gathers flights, hotels, attractions, transit and restaurants, and the map pins all of them, so a hotel's distance from the sights shows at a glance. People choose which pins they see.",
-        flows: [
-          { label: 'Before: a tab for every question', steps: ['Search hotels', 'Open a map', 'Look up attractions', 'Back to hotels', 'Find transit'] },
-          { label: 'After: one map for the whole trip', steps: ['Search a destination', 'See every vertical pinned', 'Filter to what matters', 'Choose with distance in view'] },
-        ],
-        shots: [{ src: mapVerticals, alt: 'Miami on one map, annotated: universal search, the selected destination with top attractions, flights and hotels, and a map pinning all of them', width: 1600, height: 869 }],
-      },
-      {
-        title: 'Filter the map to what matters',
-        body: 'A map with every pin is as hard to read as a long list. I designed filters that narrow it to attractions, stays, restaurants or transit, one at a time or combined, with sub-filters inside each. A heat map shows where restaurants are in demand, and transit options show how to get around the city.',
-        shots: [{ src: mapFilters, alt: 'Filter states of the Miami map, annotated: all pins, multi-select filters, attractions only, stays only, restaurants with a demand heat map, and transit', width: 1600, height: 1253 }],
-      },
-    ],
-    result: {
-      body: 'I explored the map from mild to wild. The mild ideas gave engineering something to build early, and the wild ones showed where the experience could go. I tested the concepts with users, prioritized an MVP with the product manager and engineers, and delivered its key modules.',
-      changes: [
-        ['Switching between apps', 'Every vertical on one map'],
-        ['Not sure where to go', 'Destinations by region, theme and season'],
-        ['Every pin at once', 'Filters for what matters'],
-      ],
-      shots: [
-        { src: mapDestination, alt: 'Miami destination panel with the best time to visit, things to do and flights, beside a map of hotel and attraction pins', width: 1600, height: 955, caption: 'A destination, with every vertical pinned' },
-        { src: mapAttraction, alt: 'Zoo Miami detail with peak hours, opening times and nearby attractions, beside the map', width: 1600, height: 955, caption: 'An attraction in context' },
-      ],
-    },
-    takeaway: {
-      line: 'Design without constraints first, then let the team decide what ships.',
-      body: 'I had to hold the vision and the plan at once. Starting wide kept the map ambitious, and prioritizing with product and engineering kept the first release buildable.',
-    },
-    film: { src: './films/travel-map.mp4', poster: './films/travel-map-poster.jpg', captions: './films/travel-map.vtt', duration: '1:54' },
-    earlier: true,
-    color: '#1e5b4f',
-    ink: '#e3efe9',
-    cover: { src: mapCover, alt: 'Bing Travel map with an Explore panel of nearby, North American and Asian destinations beside a world map of destination pins', width: 1600, height: 950 },
-  },
-  {
-    id: 'trip-planning',
-    name: 'Bing Trip Planning',
-    category: 'Travel planning',
-    headline: 'Pick up the trip where you left it.',
-    description: "I designed trip planning for Bing Travel, from north star to delivery: one page per trip that remembers what you saved, what you booked and what's left to do.",
-    summary: 'I designed one page per trip on Bing Travel that remembers your planning across sessions.',
-    role: 'Product designer',
-    organization: 'Microsoft x Tech Mahindra',
-    timeline: 'June to September 2024',
-    team: 'A senior designer for overall look and feedback, 1 product manager and 2+ engineers',
-    scope: 'Concept, north star design, interaction design and delivery of key modules',
-    metrics: [{ value: '1 page', label: 'Per trip, for every save and booking' }],
-    locked: true,
-    earlier: true,
-    color: '#f2a65a',
-    ink: '#1d1308',
-    cover: { src: tripsCoverLocked, alt: 'Blurred preview of Bing Trip Planning with a lock, protected under NDA', width: 1600, height: 1000 },
-  },
-  {
-    id: 'club-seals',
-    name: 'Club Seals',
-    category: 'Rewards and gamification',
-    headline: 'Always something inside.',
-    description: 'In a 24-hour challenge for FirstClub, a premium grocery app, I turned its hidden Toss & Win game into a daily wax seal you hold to open, with something useful inside every time.',
-    summary: 'A 24-hour concept for FirstClub: a daily wax seal that always has something useful inside.',
-    role: 'Product designer',
-    organization: 'FirstClub design challenge',
-    timeline: 'October 2026, in 24 hours',
-    status: 'Concept, not affiliated with FirstClub',
-    team: 'Solo',
-    scope: 'App audit, concept, interaction and motion design, edge cases, and a clickable prototype built with AI',
-    metrics: [
-      { value: '24 hours', label: 'From brief to a clickable prototype' },
-      { value: '18', label: 'Screens in the main flow' },
-      { value: '9', label: 'Edge cases designed' },
-    ],
-    problem: {
-      body: 'The brief asked for a gamified way for members to find and unlock offers, something that gives them a reason to come back and feels like FirstClub. I started with the live app. Offers and rewards already showed up in at least six places, from the gift icon on Home to the cart, and nearly all of them asked for something first: a bigger cart, a first order or a referral. The one game, Toss & Win, sits in the Profile menu, and for a new member it opens to an empty screen with no way to play. A toss can also land on the losing side, which sits badly with a brand built on “tested and tasted”.',
-      stats: [
-        { value: '6+', label: 'Places offers and rewards show up in the app' },
-        { value: '3', label: 'Prompts to spend more on a single cart screen' },
-      ],
-      quote: { text: 'No Rewards Earned Yet. Play to unlock them now', source: 'Toss & Win for a new member, with no button to play' },
-    },
-    insight: 'Plenty of rewards. No reason to come back tomorrow.',
+    insight: 'Users need a hassle-free, intuitive way to make and accept crypto payments without complex setups or confusing workflows.',
     contrast: [
-      { title: 'Kept: what members already know', items: ['The gift icon on Home', 'The Toss & Win rewards inbox', "The cart's Gifts for you rail", 'The Free chip and struck-out price', 'The FirstClub Approved stamp'], keep: true },
-      { title: 'Left out: what makes rewards feel like work', items: ['A side that loses', 'Spending more to unlock', 'An empty screen with nothing to do', 'Streaks that reset', 'Countdowns', 'Another pop-up'], keep: false },
+      { title: 'Kept: what merchants need', items: ['User-friendly dashboard', 'Real-time transaction tracking', 'Strong security measures'], keep: true },
+      { title: 'Removed: what existing platforms get wrong', items: ['Cluttered interfaces', 'Unclear transaction visibility', 'Complex setups', 'Confusing workflows'], keep: false },
     ],
     decisions: [
       {
-        title: 'Put it where members already look',
-        body: "I compared four places for a daily reward on Home: a slide in the hero carousel, a pop-up when the app opens, a new tab and the gift icon. The carousel has six slides, Home opens with a pop-up and the tab bar is full. The gift icon already means rewards, so a small wax seal appears on it only when there's one to open, with a one-time tip for new members. Toss & Win's row in Profile becomes Club Seals, so the old way in keeps working.",
+        title: 'Organize every feature around what merchants do',
+        body: 'I designed the information architecture of the dashboard to ensure smooth navigation. By organizing key features in a clear, logical way, merchants can access important actions and information quickly. I then mapped user flows for specific tasks, such as creating an invoice: the merchant logs in, navigates to the invoice section, clicks "Create Invoice," fills in the necessary details and finalizes the invoice.',
         flows: [
-          { label: 'Before: rewards behind the Profile menu', steps: ['Profile', 'Toss & Win', 'Empty inbox', 'Nothing to play'] },
-          { label: 'After: a seal on the gift icon', steps: ['Home', 'Gift icon', 'Hold the seal', 'Something inside'] },
+          { label: 'User flow: creating an invoice', steps: ['Start', 'Login', 'Verify OTP', 'Dashboard', 'Create invoice', 'Fill details', 'Generate invoice'] },
         ],
-        compare: true,
-        shots: [
-          { src: sealsHomeToday, alt: "FirstClub's Home screen today, with the gift and wallet icons at the top right and a Free raisins and cashews banner", width: 900, height: 1948, caption: 'Home today' },
-          { src: sealsHome, alt: 'The same Home screen with a small green wax seal on the gift icon and a one-time tip: a sealed gift waits here every day', width: 900, height: 1948, caption: 'With a seal on the gift icon' },
-        ],
+        shots: [{ src: invoicesScreen, alt: 'BlockBolt invoices page with a create invoice form beside a live invoice preview', width: 1600, height: 764, caption: 'Invoices' }],
       },
       {
-        title: "Make the brand's stamp something you open",
-        body: "FirstClub already has a round “FirstClub Approved” stamp with its F, so I made that stamp into a wax seal. Opening it is a press and hold for under a second: a ring fills, the phone ticks and the seal cracks. Holding gives the moment some weight and stops accidental opens, and letting go early costs nothing. The daily seal never needs a purchase, and there's always something useful inside, most often a member price or free delivery. Every reward is used with an order, so the cost only lands when someone orders. The reveal says what it is and how long it's valid, with no “You won!” and no countdown.",
-        flows: [{ label: 'From their stamp to a seal', steps: ['FirstClub Approved stamp', 'A wax seal with the same F', 'Hold to break it', 'Something inside'] }],
-        shots: [
-          { src: sealsHold, alt: 'Rewards page with the wax seal on an envelope and a red ring filling around it while it is held', width: 900, height: 1948, caption: 'Hold' },
-          { src: sealsCrack, alt: 'The wax seal splitting into two halves on the envelope', width: 900, height: 1948, caption: 'It cracks' },
-          { src: sealsReveal, alt: 'Reveal card: a treat from FC Cafe, a box of six choco chip cookies, free, valid till Wednesday, with progress toward this week', width: 900, height: 1948, caption: "What's inside" },
-        ],
+        title: 'Put stats and payments first',
+        body: 'I designed a dashboard where merchants can easily track their stats and payments. The layout presents key financial insights, recent transactions, and performance metrics in a clear, user-friendly way.',
+        shots: [{ src: dashboardScreen, alt: 'BlockBolt dashboard with total earned, total transactions, revenue statistics, a monthly comparison and a table of recent payments', width: 1600, height: 764, caption: 'Dashboard' }],
       },
       {
-        title: 'Give the week a goal, with no streak to lose',
-        body: "Streaks punish the one day life gets in the way. Instead, any five seals in a week turn the card gold, and the Golden Seal lets members choose one of three gifts, the same way Refer & Earn lets them choose. A seal also comes with every order, opened during the wait for delivery, so five is reachable without opening the app every day. Rewards apply on their own in the cart's Gifts for you rail, with no code and no “shop for ₹X more”.",
-        flows: [
-          { label: 'First try: a daily streak', steps: ['Day 3 streak', 'Miss a day', 'Start again'] },
-          { label: 'Now: any five days in a week', steps: ['Five seals', 'Golden Seal', 'Choose a gift', 'Applied in the cart'] },
-        ],
+        title: 'Give each part of the business its own place',
+        body: 'The POS section helps merchants manage orders, add categories, update products, and handle customers. Paylinks let them create and share payment links and track payment statuses. The Orders page organizes orders by blockchain, providing a clear overview of transactions.',
         shots: [
-          { src: sealsWeek, alt: 'Rewards page after opening a seal: this week shows 3 of 5 seals, with a gift at the end of the row', width: 900, height: 1948, caption: 'Five in a week' },
-          { src: sealsGolden, alt: 'Golden Seal: choose one of three gifts worth up to 500 rupees, mustard oil, cheese or a week of free delivery', width: 900, height: 1948, caption: 'Choose a gift' },
-          { src: sealsCart, alt: "Cart with the cookies already unlocked in the Gifts for you rail and listed as free from your seal", width: 900, height: 1948, caption: 'Applied in the cart' },
+          { src: posScreen, alt: 'BlockBolt POS section listing orders with their status, amount and customer', width: 1600, height: 764, caption: 'POS' },
+          { src: paylinksScreen, alt: 'BlockBolt Paylinks page with a list of payment links and a panel to create a new one', width: 1600, height: 764, caption: 'Paylinks' },
+          { src: ordersScreen, alt: 'BlockBolt Orders page listing orders across blockchains', width: 1600, height: 764, caption: 'Orders' },
         ],
       },
     ],
     result: {
-      title: 'Where it landed',
-      body: "I delivered it in 24 hours: an audit of the live app, four directions, the main flow, nine edge cases, motion specs, a component library and a clickable prototype. Most of the edge cases are about not punishing people: missing a day resets nothing, a full shelf asks before anything goes, and the rules and odds are one tap away. It isn't built, so there are no results yet. Next I'd test the hold with five to eight members, then measure weekly seal opens, rewards used and orders per member against a holdout group, with checkout conversion as the guardrail.",
-      changes: [
-        ['A toss with a losing side', 'A seal with something in every one'],
-        ['Only in the Profile menu', "On the gift icon, when there's a seal"],
-        ['Spend more to unlock', 'Rewards that apply on their own'],
-        ['An empty screen for new members', 'A seal waiting on the first visit'],
-      ],
+      title: 'Outcome',
+      body: 'I prioritized simplicity, security, and ease of use based on user goals and pain points, and designed for easy onboarding, real-time tracking, and strong security. The result is a clean, intuitive interface that enhances trust and ensures a seamless experience, from tracking payouts to running quests and fine-tuning settings.',
       shots: [
-        { src: sealsNight, alt: 'After midnight the seal rests on a dark envelope until 6 AM, with an optional reminder', width: 900, height: 1948, caption: 'After midnight' },
-        { src: sealsShelf, alt: 'Sheet for when three rewards are already saved: swap one out for the new one or keep the current three', width: 900, height: 1948, caption: 'Holding three already' },
-        { src: sealsRules, alt: 'How seals work: five rules, the odds for each kind of reward and who can take part', width: 900, height: 1948, caption: 'Rules and odds' },
+        { src: universalScreen, alt: 'BlockBolt Universal page listing completed payouts with their transaction details', width: 1600, height: 764, caption: 'Universal' },
+        { src: questScreen, alt: 'BlockBolt Quest page with current quests and a leaderboard', width: 1600, height: 764, caption: 'Quest' },
+        { src: usecasesScreen, alt: 'BlockBolt Usecases page showing ways to use BlockBolt across its ecosystem', width: 1600, height: 764, caption: 'Usecases' },
+        { src: settingsScreen, alt: 'BlockBolt Settings page for account information and payment configuration', width: 1600, height: 764, caption: 'Settings' },
       ],
     },
     takeaway: {
-      line: 'Most of the work was finding what the app already had, and connecting it.',
-      body: "The gift icon, the rewards inbox, the cart's gift rail, the Free chip and the Approved stamp were all there. The new parts are small: a seal, a hold and a weekly card. I used AI to build the clickable prototype and the Figma file, which is how one person covered the audit, the flow, the edge cases and the motion in a day.",
+      line: 'The design is all about creating a smooth experience while ensuring easy navigation and safeguarding sensitive information.',
+      body: 'I chose Nunito for its modern, clean look that ensures readability across the BlockBolt dashboard. Its rounded, friendly style adds approachability while maintaining professionalism, for both headings and body text.',
     },
-    film: { src: './films/club-seals.mp4', poster: './films/club-seals-poster.jpg', captions: './films/club-seals.vtt', duration: '1:57' },
-    concept: true,
-    color: '#0e4d2e',
-    ink: '#f3ecdc',
-    cover: { src: sealsCover, alt: 'Club Seals Rewards page: a cream envelope closed with a green wax seal, press and hold to open, and this week at 2 of 5', width: 900, height: 1948 },
+    color: '#f5b82e',
+    ink: '#141414',
+    cover: { src: dashboardScreen, alt: 'BlockBolt merchant dashboard with total earned, total transactions, revenue statistics and recent payments', width: 1600, height: 764 },
+  },
+  {
+    id: 'blockbolt-app',
+    name: 'BlockBolt App',
+    category: 'App design',
+    headline: 'Payment simplified, decentralized.',
+    description: 'The BlockBolt App is a secure and user-friendly platform for managing digital transactions.',
+    summary: 'I designed a streamlined app for smooth navigation, quick payment processing, and real-time updates.',
+    role: 'UI/UX designer',
+    organization: 'BlockBolt',
+    team: '[Placeholder] Add who you worked with',
+    scope: 'Splash screen, wallet and payment process',
+    metrics: [
+      { value: '3', label: 'Screens in the payment process' },
+      { value: '2', label: 'Ways in: create or import a wallet' },
+    ],
+    problem: {
+      body: 'Consumers struggle to find secure, reliable, and user-friendly platforms for making crypto payments in daily transactions.',
+    },
+    insight: 'A clean and intuitive design ensures anyone can make secure crypto payments without technical knowledge.',
+    decisions: [
+      {
+        title: 'Say what BlockBolt is, then offer two ways in',
+        body: 'The splash screen introduces BlockBolt as a decentralized payment protocol designed to facilitate fast, secure and cost-effective transactions on the Sui blockchain, then asks one question: create a wallet, or import one.',
+        shots: [{ src: appSplash, alt: 'BlockBolt app splash screen with Create Wallet and Import Wallet buttons, beside the wallet home with token balances', width: 1600, height: 1492, caption: 'Splash screen' }],
+      },
+      {
+        title: 'Make paying a short, clear sequence',
+        body: 'Payment details show the merchant and merchant domain first, then the coin, network, wallet address and amount. Send leads to a clear confirmation with the transaction ID, amount, network and receiver, and a link to view it on the explorer.',
+        flows: [
+          { label: 'Payment process', steps: ['Payment details', 'Coin and network', 'Send', 'Transaction successful'] },
+        ],
+        shots: [{ src: appPayment, alt: 'Three BlockBolt payment screens: empty payment details, filled payment details, and transaction successful', width: 1440, height: 1248, caption: 'Payment process' }],
+      },
+    ],
+    result: {
+      body: 'I focused on designing a streamlined interface that ensures smooth navigation, quick payment processing, and real-time updates, offering users an efficient and modern experience.',
+    },
+    takeaway: { line: 'Secure crypto payments, without needing technical knowledge.' },
+    color: '#2b2f8f',
+    ink: '#eef0ff',
+    cover: { src: appSplash, alt: 'BlockBolt app splash screen and wallet home on two phones, with the line Payment simplified, decentralized', width: 1600, height: 1492 },
+  },
+  {
+    id: 'social-media',
+    name: 'Blockbolt & PocketPay',
+    category: 'Social media design',
+    headline: 'Bold visuals for a tech-savvy audience.',
+    description: 'I designed bold, engaging social media visuals for Blockbolt & PocketPay, highlighting their secure and seamless payment solutions.',
+    summary: 'Social media designs for Blockbolt and PocketPay, built on clear messaging and strong visuals.',
+    role: 'Social media designer',
+    organization: 'Blockbolt & PocketPay',
+    team: '[Placeholder] Add who you worked with',
+    scope: 'Campaign posts for Blockbolt NFTs and PocketPay',
+    metrics: [
+      { value: '2', label: 'Brands: Blockbolt and PocketPay' },
+      { value: '5', label: 'Campaign posts in this selection' },
+    ],
+    problem: {
+      body: 'Blockbolt and PocketPay needed social media visuals that highlight secure and seamless payment solutions to a tech-savvy audience.',
+    },
+    insight: 'Clear messaging and strong visuals are what resonate with a tech-savvy audience.',
+    decisions: [
+      {
+        title: 'One bold message per post',
+        body: "Blockbolt's campaigns, like 'Karrier Pigeons' NFT—Yours to Win!, WINSOME Is Going Live Tomorrow and Win NFTs—Enroll Now, each lead with a single headline and a clear call to action.",
+        shots: [{ src: karrierPost, alt: "Blockbolt social post: 'Karrier Pigeons' NFT, yours to win, with an illustrated row of pigeons", width: 1600, height: 898, caption: 'Blockbolt' }],
+      },
+      {
+        title: 'Show the product at work',
+        body: 'PocketPay posts such as PocketPay in Action and Revolutionize Your Sales put the payment product front and centre.',
+        shots: [{ src: pocketpayPost, alt: 'PocketPay social post: PocketPay in action, with a product illustration', width: 821, height: 459, caption: 'PocketPay' }],
+      },
+    ],
+    result: {
+      body: 'The designs focused on clear messaging and strong visuals to resonate with a tech-savvy audience.',
+    },
+    takeaway: { line: 'Clear messaging first, strong visuals second.' },
+    earlier: true,
+    color: '#1b1b1b',
+    ink: '#f2c94c',
+    cover: { src: karrierPost, alt: "Blockbolt social post: 'Karrier Pigeons' NFT, yours to win", width: 1600, height: 898 },
+  },
+  {
+    id: 'linq50',
+    name: 'Linq50',
+    category: 'Logo design',
+    headline: 'Unlock the possibilities.',
+    description: 'The Linq50 logo features a UK map-inspired design, symbolizing connectivity and collaboration.',
+    summary: 'A UK map-inspired logo for Linq50, symbolizing connectivity and collaboration.',
+    role: 'Logo designer',
+    organization: 'Linq50',
+    team: '[Placeholder] Add who you worked with',
+    scope: 'Logo, colour palette, typography and brand applications',
+    metrics: [
+      { value: '5', label: 'Colours in the palette' },
+      { value: 'Kinn', label: 'Brand typeface' },
+    ],
+    problem: {
+      body: "Linq50 needed a mark that reflects innovation, unity, and the brand's focus on fostering meaningful global partnerships.",
+    },
+    insight: 'Connectivity and collaboration, drawn as a map.',
+    decisions: [
+      {
+        title: 'A UK map-inspired mark',
+        body: 'The logo combines simplicity with modern aesthetics. It carries across a purple and orange palette, the Kinn typeface, and applications from ID cards and caps to T-shirts and a phone screen.',
+        shots: [{ src: linq50Brand, alt: 'Linq50 brand board: the logo, an ID card, colour palette, phone, pattern, cap, Kinn typeface, T-shirts and a white logo', width: 1600, height: 1154, caption: 'Linq50 brand applications' }],
+      },
+    ],
+    result: {
+      body: "The Linq50 logo combines simplicity with modern aesthetics, reflecting innovation, unity, and the brand's focus on fostering meaningful global partnerships.",
+    },
+    takeaway: { line: 'Simplicity with modern aesthetics.' },
+    earlier: true,
+    color: '#7a00e6',
+    ink: '#f4ecff',
+    cover: { src: linq50Brand, alt: 'Linq50 brand board with the logo and its applications', width: 1600, height: 1154 },
   },
 ]

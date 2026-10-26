@@ -23,7 +23,7 @@ export function ResumePage() {
         <div className="flex flex-wrap items-end justify-between gap-x-10 gap-y-8">
           <PageTitle className="text-[clamp(4rem,15vw,16rem)] leading-[0.8]">Resume</PageTitle>
           <a
-            href="./Hardik_Agarwal_Resume.pdf"
+            href="./Rahul_Bajpai_Resume.pdf"
             download
             className="inline-flex h-14 items-center gap-2.5 rounded-full bg-primary px-7 text-[16px] font-semibold text-primary-foreground transition-transform active:scale-[0.97]"
           >
@@ -32,7 +32,7 @@ export function ResumePage() {
           </a>
         </div>
         <p className="mt-10 max-w-[48ch] text-[clamp(1.2rem,1.7vw,1.6rem)] leading-snug">
-          I'm a product designer with 5+ years across AI, enterprise B2B platforms and consumer products. At Microsoft, where I was rated Outstanding, I lifted Store company onboarding success from 35% to 73% and cut the wait from ~15 days to ~1 day. I design end to end, from product strategy to prototypes in code with AI, working closely with product managers and engineers.
+          I'm a UI/UX & Product Designer with 4.5+ years of experience designing user-centric digital products, websites, and dashboards. At Design'N'Buy I led the redesign of DesignO, a 14-year-old flagship product, into a modern and user-focused platform. I'm skilled in UX strategy, wireframing, prototyping, and creating scalable, intuitive user experiences.
         </p>
       </section>
 
@@ -40,7 +40,7 @@ export function ResumePage() {
         <h2 id="resume-experience" className="resume-block display text-[clamp(2.75rem,5.4vw,5.75rem)]">Experience</h2>
         <div className="mt-10">
           {experience.map((job) => (
-            <article key={job.company} className="resume-block grid gap-6 border-t border-border py-10 md:grid-cols-12 md:gap-8">
+            <article key={`${job.company} ${job.dates}`} className="resume-block grid gap-6 border-t border-border py-10 md:grid-cols-12 md:gap-8">
               <div className="md:col-span-4">
                 <h3 className="text-[clamp(1.6rem,2.4vw,2.4rem)] font-bold leading-tight tracking-[-0.03em] [font-stretch:108%]">{job.company}</h3>
                 <p className="mt-2 text-[17px] font-semibold">{job.role}</p>

@@ -39,7 +39,7 @@ export function Approach() {
   return (
     <section ref={root} id="my-approach" aria-labelledby="approach-title" className="px-5 py-[clamp(6rem,18vh,13rem)] md:px-10">
       <h2 id="approach-title" className="approach-text max-w-[21ch] text-[clamp(2.1rem,5.3vw,6.25rem)] font-[640] leading-[1.02] tracking-[-0.038em]">
-        Design is communication. I turn ideas into working prototypes early, so everyone in the room sees the problem through the same{' '}
+        I turn complex challenges into simple, intuitive designs, and see the big picture in every pixel through the user’s{' '}
         <span className="approach-chip relative -top-[0.06em] mx-[0.08em] inline-block h-[0.82em] w-[1.5em] overflow-hidden rounded-full align-middle">
           <img src={photos.cameraChip} alt="" className="size-full object-cover" width={529} height={289} loading="lazy" decoding="async" />
         </span>{' '}

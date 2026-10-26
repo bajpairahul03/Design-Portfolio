@@ -2,7 +2,7 @@ import type { ReactNode } from 'react'
 import { gsap } from '@/lib/gsap'
 import { cn } from '@/lib/utils'
 import { offsetIn } from '@/sections/hero-notes'
-import wallMask from '../../assets/hardik-bench-wall.png'
+import wallMask from '../../assets/rahul-sky.png'
 
 export type CoverContext = {
   q: (selector: string) => HTMLElement[]
@@ -56,8 +56,8 @@ function goLite(context: CoverContext) {
   for (const element of context.q('[style*="transform"]')) if (element.style.transform) gsap.set(element, { force3D: false })
 }
 
-// Covers only the painted wall behind Hardik (and the gaps between the slats), registered to the photograph: the mask
-// shares the photo's cover crop and fades out with its sides on wide screens. He, the bench and the ground stay the
+// Covers only the night sky behind Rahul (between the trees), registered to the photograph: the mask
+// shares the photo's cover crop and fades out with its sides on wide screens. He, the street and the trees stay the
 // photograph's own pixels. With `masked` off it is just the registered box, for layers that apply the mask themselves;
 // `wide` runs it edge to edge instead of inside the photo's 8:5 box.
 function WallLayer({ children, className, masked = true, wide = false }: { children?: ReactNode; className?: string; masked?: boolean; wide?: boolean }) {

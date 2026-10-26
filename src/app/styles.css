@@ -231,10 +231,10 @@
 
 /* Cover notes: reproduces the photo's cover crop (object-position 50% 3%) so notes pin to photo fractions. */
 .note-fit {
-  width: max(100cqw, 100cqh * 1122 / 1402);
-  height: max(100cqh, 100cqw * 1402 / 1122);
-  left: calc((100cqw - max(100cqw, 100cqh * 1122 / 1402)) * 0.5);
-  top: calc((100cqh - max(100cqh, 100cqw * 1402 / 1122)) * 0.03);
+  width: max(100cqw, 100cqh * 1164 / 1106);
+  height: max(100cqh, 100cqw * 1106 / 1164);
+  left: calc((100cqw - max(100cqw, 100cqh * 1164 / 1106)) * 0.5);
+  top: calc((100cqh - max(100cqh, 100cqw * 1106 / 1164)) * 0.03);
 }
 
 /* Children, not the overlay itself, because the scroll timeline writes inline visibility on the overlay. */

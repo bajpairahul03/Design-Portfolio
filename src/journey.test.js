@@ -89,9 +89,9 @@ test('reading links resolve only supported portfolio pages', () => {
 test('the work overview exposes roles, results, and direct project links', () => {
   const markup = readerMarkup('work')
   for (const page of ['store', 'copilot', 'hello', 'vr']) assert.ok(markup.includes(`href="#work/${page}"`))
-  assert.ok(markup.includes('Product designer / Microsoft'))
-  assert.ok(markup.includes('35% to 73%'))
-  assert.ok(markup.includes('New sports per cycle'))
+  assert.ok(markup.includes('Solo UI/UX designer / BlockBolt'))
+  assert.ok(markup.includes('Merchant modules designed'))
+  assert.ok(markup.includes('Screens in the payment process'))
 })
 
 test('the work catalogue includes all four projects without duplicate heading IDs', () => {
@@ -111,15 +111,12 @@ test('project readers use a unique heading and provide onward navigation', () =>
   assert.ok(readerMarkup('resume').includes('Experience'))
 })
 
-test('the about page introduces personal interests and practice before career history', () => {
+test('the about page introduces Rahul before his career history', () => {
   const markup = readerMarkup('about')
-  assert.ok(markup.includes('customizing'))
-  assert.ok(markup.includes('same lens'))
-  assert.ok(markup.includes('Photography'))
-  assert.ok(markup.includes('Astronomy'))
-  assert.ok(markup.includes('staying active'))
-  assert.ok(markup.indexOf('<h3>Outside work</h3>') < markup.indexOf('<h3>Microsoft</h3>'))
-  assert.ok(markup.indexOf('<h3>How I work</h3>') < markup.indexOf('<h3>Microsoft</h3>'))
+  assert.ok(markup.includes('Balaghat'))
+  assert.ok(markup.includes('big picture in every pixel'))
+  assert.ok(markup.indexOf('<h3>Take a look</h3>') < markup.indexOf('<h3>MCS Ventures</h3>'))
+  assert.ok(markup.indexOf('<h3>What I do</h3>') < markup.indexOf('<h3>MCS Ventures</h3>'))
   assert.ok(markup.includes('id="reader-title"'))
 })
 
@@ -132,9 +129,9 @@ test('the scroll story presents each project once with a readable role, result, 
     assert.ok(markup.includes(`data-artwork="${exhibit.id}"`))
     assert.ok(markup.includes(`aria-label="Read project: ${exhibit.label}"`))
   }
-  assert.ok(markup.includes('Product designer / Microsoft'))
-  assert.ok(markup.includes('35% to 73%'))
-  assert.ok(markup.includes('79.5 to 83.2'))
+  assert.ok(markup.includes('Solo UI/UX designer / BlockBolt'))
+  assert.ok(markup.includes('Merchant modules designed'))
+  assert.ok(markup.includes('Brands'))
   assert.equal((markup.match(/Original illustration, not product UI/g) || []).length, 4)
 })
 

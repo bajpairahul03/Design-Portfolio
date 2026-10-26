@@ -36,9 +36,9 @@ function preloadCritical() {
         }
         // The two photograph layers, then the wall mask that the star trails and the veil are cut to.
         const hero = JSON.stringify([
-          ['image', asset(/hardik-bench-scene-[\w-]+\.webp$/)],
-          ['image', asset(/hardik-bench-subject-[\w-]+\.webp$/)],
-          ['image', asset(/hardik-bench-wall-[\w-]+\.png$/)],
+          ['image', asset(/rahul-hero-[\w-]+\.webp$/)],
+          ['image', asset(/rahul-subject-[\w-]+\.webp$/)],
+          ['image', asset(/rahul-sky-[\w-]+\.png$/)],
         ])
         return [
           { tag: 'link', attrs: { rel: 'preload', href: asset(/mona-sans-latin-wdth-normal-[\w-]+\.woff2$/), as: 'font', type: 'font/woff2', crossorigin: true }, injectTo: 'head' },

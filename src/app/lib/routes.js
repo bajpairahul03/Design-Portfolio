@@ -1,4 +1,4 @@
-export const projectIds = ['store', 'portal', 'copilot', 'sms-organizer', 'travel-map', 'trip-planning', 'club-seals']
+export const projectIds = ['designo', 'blockbolt-dashboard', 'blockbolt-app', 'social-media', 'linq50']
 
 // Earlier placeholder projects; old links to them land on the Work index.
 const retiredIds = ['hello', 'vr']
@@ -27,5 +27,5 @@ export function routeKey(route) {
 
 export function routeTitle(route, names = {}) {
   if (route.page === 'project') return names[route.id] || 'Project'
-  return { home: 'Hardik Agarwal', work: 'Work', about: 'About', resume: 'Resume' }[route.page]
+  return { home: 'Rahul Bajpai', work: 'Work', about: 'About', resume: 'Resume' }[route.page]
 }

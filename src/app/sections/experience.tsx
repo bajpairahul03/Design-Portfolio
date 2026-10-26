@@ -46,11 +46,11 @@ export function Experience() {
       <div className="grid gap-10 px-5 md:grid-cols-12 md:px-10">
         <div className="md:col-span-4">
           <h2 id="experience-title" className="display text-[clamp(2.75rem,5.4vw,5.75rem)]">Experience</h2>
-          <p className="mt-5 max-w-[30ch] text-[17px] leading-relaxed text-muted-foreground">In 5+ years I've gone from visual design at PlayShifu to product design at Microsoft, where I was rated Outstanding.</p>
+          <p className="mt-5 max-w-[30ch] text-[17px] leading-relaxed text-muted-foreground">4.5+ years, from web design at iCONEX India to product design at Design'N'Buy.</p>
         </div>
         <ol className="jobs md:col-span-8 md:col-start-5">
           {experience.map((job) => (
-            <li key={job.company} className="job grid grid-cols-[1fr_auto] items-baseline gap-x-6 gap-y-1 border-b border-border py-7 first:pt-0 md:grid-cols-[1.25fr_1fr_auto]">
+            <li key={`${job.company} ${job.dates}`} className="job grid grid-cols-[1fr_auto] items-baseline gap-x-6 gap-y-1 border-b border-border py-7 first:pt-0 md:grid-cols-[1.25fr_1fr_auto]">
               <p className="text-[clamp(1.6rem,2.9vw,2.9rem)] font-bold leading-tight tracking-[-0.035em] [font-stretch:108%]">{job.company}</p>
               <p className="tabular text-[15px] font-medium text-muted-foreground md:order-last">{job.dates}</p>
               <p className="col-span-2 text-[17px] md:col-span-1">{job.role}</p>

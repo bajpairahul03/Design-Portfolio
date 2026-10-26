@@ -352,7 +352,10 @@ function CaseStudyPage({ project, study, filmLink }: { project: Project; study: 
             <ol>
               {study.decisions.map((decision, index) => (
                 <li key={decision.title} className="project-block mt-10 border-t border-border pt-8">
-                  <p className="text-[15px] font-semibold text-muted-foreground tabular">{String(index + 1).padStart(2, '0')}</p>
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+                    <p className="text-[15px] font-semibold text-muted-foreground tabular">{String(index + 1).padStart(2, '0')}</p>
+                    {decision.basis && <p className="rounded-full border border-border px-2.5 py-0.5 text-[13px] font-semibold text-muted-foreground">{decision.basis}</p>}
+                  </div>
                   <h3 className="mt-2 max-w-[30ch] text-[clamp(1.35rem,1.9vw,1.9rem)] font-bold leading-tight tracking-[-0.02em] [font-stretch:106%]">{decision.title}</h3>
                   <p className={body}>{decision.body}</p>
                   {decision.flows && <Flows flows={decision.flows} />}

@@ -80,7 +80,7 @@ export function WorkPage() {
       <section className="px-5 pb-[clamp(3rem,8vh,6rem)] pt-[calc(var(--header-height)+clamp(3rem,12vh,8rem))] md:px-10">
         <PageTitle className="text-[clamp(4.5rem,18vw,19rem)] leading-[0.8]">Work</PageTitle>
         <p className="mt-10 max-w-[42ch] text-[clamp(1.2rem,1.7vw,1.6rem)] leading-snug">
-          Recent projects at Microsoft, earlier work on Bing Travel and SMS Organizer, and a 24-hour concept for FirstClub. Each is a short version of the full case study: what I owned, the decisions that mattered and what changed.
+          The DesignO redesign at Design'N'Buy, the BlockBolt merchant dashboard and app, social media designs for Blockbolt and PocketPay, and the Linq50 logo. Each is a short version of the full case study: what I owned, the decisions that mattered and what changed.
         </p>
       </section>
       <ol className="px-5 pb-[clamp(5rem,14vh,10rem)] md:px-10" aria-label="Projects">

@@ -81,7 +81,7 @@ function Vortex({ theme }: { theme: Theme }) {
   if (still) return <div ref={(node) => { node?.replaceChildren(still) }} className={`typography-vortex-component typography-vortex-component--${theme}`} />
   return (
     <div ref={host} className="size-full">
-      {live && <TypographyVortexCanvas mode={theme} phrase="HARDIK AGARWAL / PRODUCT DESIGNER / " speed={0.75} opacity={0.9} />}
+      {live && <TypographyVortexCanvas mode={theme} phrase="RAHUL BAJPAI / UI/UX DESIGNER / " speed={0.75} opacity={0.9} />}
     </div>
   )
 }
@@ -99,7 +99,7 @@ export function SiteFooter() {
 
       <div className="flex flex-1 flex-col items-center justify-center px-5 pb-10 pt-[calc(var(--header-height)+3rem)] text-center">
         <h2 id="contact-title" className="display-wide max-w-[11ch] text-[clamp(2.6rem,8vw,9rem)]">
-          Bring me a hard problem.
+          Let’s connect.
         </h2>
         <Magnetic className="mt-12">
           <a
@@ -129,7 +129,7 @@ export function SiteFooter() {
       </div>
 
       <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-3 border-t border-border bg-[#eef1f6]/90 px-5 py-5 text-[15px] backdrop-blur-md md:px-10 dark:bg-[#151515]/90">
-        <p>© 2026 Hardik Agarwal</p>
+        <p>© 2026 Rahul Bajpai</p>
         <nav aria-label="Footer" className="flex flex-wrap items-center gap-x-6 gap-y-2">
           <Link to="#work" className="hover:underline">Work</Link>
           <Link to="#about" className="hover:underline">About</Link>
