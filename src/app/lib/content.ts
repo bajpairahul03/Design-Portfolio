@@ -10,8 +10,8 @@ import type { ProjectId } from './routes.js'
 
 export { projects }
 export type { CaseStudy, Endorsement, Film, Flow, Metric, Project, Quote, Shot } from './projects'
-// Rahul's portrait from his Figma portfolio is the only photograph so far, so every slot uses it. The cover uses a crop
-// without the treetops, so his face sits under the name like the layout expects.
+// The cover uses a black-and-white grade of Rahul's night street portrait, framed so his face sits under the name;
+// the other slots keep the colour original.
 export const photos = { cameraPortrait: portrait, cameraChip: chip, candid: portrait, subject, benchScene: hero }
 export const email = 'work.rahulbajpai@gmail.com'
 export const phone = { label: '+91 95894 24837', href: 'tel:+919589424837' }

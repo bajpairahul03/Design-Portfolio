@@ -40,7 +40,8 @@ function NotePins() {
 }
 
 // The name sits between the photograph and a registered cutout of Rahul, so his head passes in front of it.
-// The photograph is Rahul's night street portrait from his Figma portfolio.
+// The photograph is a black-and-white grade of Rahul's night street portrait; the cutout keeps the original's outline,
+// which still matches him exactly, and the sky mask was redrawn for this version's background.
 function HeroStage() {
   const layer = 'cover-layer absolute inset-[-2%] size-[104%] max-w-none object-cover'
   return (
@@ -49,7 +50,7 @@ function HeroStage() {
         <div className="hero-frame absolute inset-0 overflow-hidden bg-[#0b110d]">
           <div className="hero-image absolute inset-0">
             <div className="cover-photo absolute inset-0">
-              <img className={layer} data-cover="scene" src={photos.benchScene} alt="Rahul in a red jacket on a street at night" width={1164} height={1106} fetchPriority="high" decoding="async" />
+              <img className={layer} data-cover="scene" src={photos.benchScene} alt="Black-and-white photo of Rahul smiling on a street at night" width={1164} height={1106} fetchPriority="high" decoding="async" />
             </div>
           </div>
           <StarTrails />
