@@ -20,10 +20,7 @@ jobs:
         with:
           node-version: 24
       - name: Install dependencies
-        run: |
-          # The lockfile resolves through a Microsoft-internal npm mirror; install the same versions from npmjs.org.
-          sed -i 's#https://ms-feed-25.pkgs.visualstudio.com/1es-public/_packaging/npm-public/npm/registry/#https://registry.npmjs.org/#g' package-lock.json
-          npm ci
+        run: npm ci
       - name: Build
         run: npm run build:pages
       - uses: actions/upload-pages-artifact@v5
